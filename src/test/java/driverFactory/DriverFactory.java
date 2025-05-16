@@ -2,6 +2,7 @@ package driverFactory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ConfigReader;
+import utilities.LogHandler;
 
 import java.time.Duration;
 
@@ -10,49 +11,55 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 public class DriverFactory {
+	private static ThreadLocal<WebDriver> tldriver = new ThreadLocal<>();
 
-    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	String browser = ConfigReader.getProperties("browser");
 
-    public static WebDriver initDriver() {
-        String browser = ConfigReader.getProperty("browser");
+	public static ConfigReader configFileReader = new ConfigReader();
 
-        if (browser.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
-            driver.set(new ChromeDriver());
-        } else if (browser.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            driver.set(new FirefoxDriver());
-        } else if (browser.equalsIgnoreCase("edge")) {
-            WebDriverManager.edgedriver().setup();
-            driver.set(new EdgeDriver());
-        } else if (browser.equalsIgnoreCase("safari")) {
-            WebDriverManager.safaridriver().setup();
-            driver.set(new SafariDriver());
-        } else {
-            throw new RuntimeException("Unsupported browser: " + browser);
-        }
+	@BeforeClass
+	@Parameters("browser")
+	public static WebDriver setUp(@Optional("chrome") String browser) {
+		if (browser.equalsIgnoreCase("firefox")) {
+			LogHandler.info("Testing on firefox");
+			tldriver.set(new FirefoxDriver());
+		} else if (browser.equalsIgnoreCase("chrome")) {
+			LogHandler.info("Testing on chrome");
+			tldriver.set(new ChromeDriver());
+		} else if (browser.equalsIgnoreCase("edge")) {
+			LogHandler.info("Testing on Edge");
+			tldriver.set(new EdgeDriver());
+		} else {
+			throw new RuntimeException("Unsupported browser: " + browser);
+		}
 
-       
-        getDriver().manage().window().maximize();
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        return getDriver();
-    }
+		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		return getDriver();
+	}
 
-    public static WebDriver getDriver() {
-        return driver.get();
-    }
+	public static WebDriver getDriver() {
+		return tldriver.get();
+	}
 
-    public static void quitDriver() {
-        if (getDriver() != null) {
-            getDriver().quit();
-            driver.remove(); 
-        }
-    }
+	
+		
+		@AfterMethod
+		public void tearDown() {
+			if (getDriver() != null) {
+				getDriver().quit();
+				tldriver.remove();
+			}
+		}
+
+		public static ConfigReader configReader() {
+			return configFileReader;
+		
+	}
 }
-
-
-
