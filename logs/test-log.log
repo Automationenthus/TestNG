@@ -1,0 +1,15 @@
+2025-05-16 22:30:55 INFO  LogHandler:12 - user is on: Time Complexity
+2025-05-16 22:31:25 INFO  LogHandler:12 - user is on: Time Complexity
+2025-05-16 22:32:04 INFO  LogHandler:12 - user is on: Time Complexity
+2025-05-16 22:39:13 INFO  LogHandler:12 - answer is: hello
+2025-05-16 22:45:36 INFO  LogHandler:12 - user sucessfully navigated back to: Time Complexity
+2025-05-16 22:51:19 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
+2025-05-16 22:51:46 INFO  LogHandler:12 - user is on: Data Structures-Introduction
+2025-05-16 22:51:51 INFO  LogHandler:12 - user is on: Time Complexity
+2025-05-16 22:51:56 INFO  LogHandler:12 - user is on: Practice Questions
+2025-05-16 22:52:04 INFO  LogHandler:12 - user is on: Assessment
+2025-05-16 22:52:12 INFO  LogHandler:12 - alert not found
+2025-05-16 22:52:34 INFO  LogHandler:12 - alert text is: NameError: name 'hello' is not defined on line 1
+2025-05-16 22:52:54 INFO  LogHandler:12 - answer is: hello
+2025-05-16 22:53:01 INFO  LogHandler:12 - user successfully navigated back to: Time Complexity
+2025-05-16 22:53:09 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
