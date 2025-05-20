@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.DataStructureIntroTest">
+      <class name="tests.TreeTest">
         <methods>
-          <include name="pageSetup"/>
-          <include name="timeComplexity" invocation-numbers="0"/>
+          <include name="treePageValidation"/>
           <include name="setUp"/>
+          <include name="practiceQuestionValidation" invocation-numbers="0"/>
+          <include name="pageSetup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- tests.DataStructureIntroTest -->
+      </class> <!-- tests.TreeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
