@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="ds-algo">
-  <test name="dataStructureIntro">
+
+  <test name="dsAlgoModules">
       <classes>
       <class name="tests.DataStructureIntroTest"/>
+      <class name="tests.RegisterTest"/>
+       <class name="tests.TreeTest"/>      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

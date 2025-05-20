@@ -27,8 +27,7 @@ public class DataStructureIntroTest extends Hooks {
 	
 	@BeforeMethod
     public void pageSetup() {
-		//WebDriver driver=DriverFactory.initDriver();
-        dp = new DataStructureIntroPF(driver);  
+		dp = new DataStructureIntroPF(driver);  
         dp.loginBackgroundForPages();
         softAssert = new SoftAssert(); 
         

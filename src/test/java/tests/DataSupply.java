@@ -27,5 +27,87 @@ public class DataSupply {
 			};
 		return data;
 	}
+	
+	@DataProvider()
+	public String[][] registerPageData(){
+		
+		String[][] data =new String[][] {
+			
+			{"Register","pwdBlank","Please fill out this field."},
+		    {"Register","usernameBlank","Please fill out this field."},
+			{"Register","confirmPwdBlank","Please fill out this field."}
+			};
+				
+		return data;
+		
+		
+	}
+	
+	@DataProvider()
+	public Object[][] registerPageDataValid(){
+		
+		String[][] data =new String[][] {
+			
+			{"Register","valid","New Account Created. You are logged in as"}
+		
+			};
+				
+		return data;
+		
+		
+	}
+	
+	@DataProvider()
+	public Object[][] treePageLinks(){
+
+		Object[][] data =new Object[][] {
+
+			{"Overview of Trees", "Overview of Trees"},              
+			{"Terminologies","Terminologies"},                  
+			{"Types of Trees","Types of Trees"},                
+			{"Tree Traversals","Tree Traversals"},                
+			{"Traversals-Illustration","Traversals-Illustration"},        
+			{"Binary Trees","Binary Trees"},                   
+			{"Types of Binary Trees","Types of Binary Trees"},          
+			{"Implementation in Python","Implementation in Python"},       
+			{"Binary Tree Traversals", "Binary Tree Traversals"},         
+			{"Implementation of Binary Trees", "Implementation of Binary Trees"}, 
+			{"Applications of Binary trees", "Applications of Binary trees"},   
+			{"Binary Search Trees","Binary Search Trees"},            
+			{"Implementation Of BST","Implementation Of BST"}
+
+		};
+
+		return data;
+
+
+	}
+	
+	@DataProvider()
+	public Object[][] treeLinks(){
+
+		Object[][] data =new Object[][] {
+
+			{"Overview of Trees","Assessment"},              
+			{"Terminologies","Assessment"},                  
+			{"Types of Trees","Assessment"},                
+			{"Tree Traversals","Assessment"},                
+			{"Traversals-Illustration","Assessment"},        
+			{"Binary Trees","Assessment"},                   
+			{"Types of Binary Trees","Assessment"},          
+			{"Implementation in Python","Assessment"},       
+			{"Binary Tree Traversals","Assessment"},         
+			{"Implementation of Binary Trees","Assessment"}, 
+			{"Applications of Binary trees","Assessment"},   
+			{"Binary Search Trees","Assessment"},            
+			{"Implementation Of BST","Assessment"}
+
+		};
+
+		return data;
+
+
+	}
+	
 
 }
