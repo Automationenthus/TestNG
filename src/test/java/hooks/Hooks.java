@@ -1,19 +1,18 @@
 package hooks;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import driverFactory.DriverFactory;
 import utilities.ConfigReader;
-import io.cucumber.java.Before;
-import io.cucumber.java.After;
-import io.cucumber.java.Scenario;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import java.util.HashSet;
-import java.util.Set;
 
 public class Hooks {
 	public static WebDriver driver;
@@ -34,6 +33,25 @@ public class Hooks {
 	@AfterMethod
 	public void tearDown() {
 		DriverFactory.quitDriver(); // Close browser
+	}
+	
+	
+	public String captureScreenShot(String testName) {
+		String timestamp=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot takeScreenShot=(TakesScreenshot)driver;
+		File sourceFile=takeScreenShot.getScreenshotAs(OutputType.FILE);
+		String targetFilePath = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + testName + "-" + timestamp + ".png";
+
+		File targetFile=new File(targetFilePath);
+		try {
+	        
+	        FileUtils.copyFile(sourceFile, targetFile);
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+		
+		return targetFilePath;
+		
 	}
 	
 }

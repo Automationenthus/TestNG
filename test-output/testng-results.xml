@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+=======
 
 <testng-results ignored="0" total="51" passed="50" failed="1" skipped="0">
+>>>>>>> main
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-19T18:34:34 PDT" name="ds-algo" finished-at="2025-05-19T18:42:06 PDT" duration-ms="451938">
+  <suite started-at="2025-05-20T18:19:56 PDT" name="ds-algo" finished-at="2025-05-20T18:21:54 PDT" duration-ms="118552">
     <groups>
     </groups>
-    <test started-at="2025-05-19T18:34:34 PDT" name="dsAlgoModules" finished-at="2025-05-19T18:42:06 PDT" duration-ms="451938">
+    <test started-at="2025-05-20T18:19:56 PDT" name="dsAlgoModules" finished-at="2025-05-20T18:21:54 PDT" duration-ms="118552">
       <class name="tests.RegisterTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:05 PDT" name="setUp" finished-at="2025-05-19T18:36:07 PDT" duration-ms="2106" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:19:56 PDT" name="setUp" finished-at="2025-05-20T18:20:02 PDT" duration-ms="6161" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:07 PDT" name="pageSetup" finished-at="2025-05-19T18:36:07 PDT" duration-ms="336" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:02 PDT" name="pageSetup" finished-at="2025-05-20T18:20:03 PDT" duration-ms="446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="registerPageValidation()[pri:1, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:07 PDT" name="registerPageValidation" finished-at="2025-05-19T18:36:07 PDT" duration-ms="126" status="PASS">
+        <test-method signature="registerPageValidation()[pri:1, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:03 PDT" name="registerPageValidation" finished-at="2025-05-20T18:20:03 PDT" duration-ms="176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerPageValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:07 PDT" name="tearDown" finished-at="2025-05-19T18:36:07 PDT" duration-ms="284" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:03 PDT" name="tearDown" finished-at="2025-05-20T18:20:03 PDT" duration-ms="385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:07 PDT" name="setUp" finished-at="2025-05-19T18:36:09 PDT" duration-ms="1988" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:03 PDT" name="setUp" finished-at="2025-05-20T18:20:06 PDT" duration-ms="3201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:09 PDT" name="pageSetup" finished-at="2025-05-19T18:36:10 PDT" duration-ms="326" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:06 PDT" name="pageSetup" finished-at="2025-05-20T18:20:07 PDT" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithoutUserInfo(java.lang.String)[pri:2, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:10 PDT" name="registerValidationWithoutUserInfo" finished-at="2025-05-19T18:36:10 PDT" duration-ms="152" status="PASS">
+        <test-method signature="registerValidationWithoutUserInfo(java.lang.String)[pri:2, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:07 PDT" name="registerValidationWithoutUserInfo" finished-at="2025-05-20T18:20:08 PDT" duration-ms="1077" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,19 +47,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerValidationWithoutUserInfo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:10 PDT" name="tearDown" finished-at="2025-05-19T18:36:10 PDT" duration-ms="330" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:08 PDT" name="tearDown" finished-at="2025-05-20T18:20:08 PDT" duration-ms="310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:10 PDT" name="setUp" finished-at="2025-05-19T18:36:13 PDT" duration-ms="2234" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:08 PDT" name="setUp" finished-at="2025-05-20T18:20:11 PDT" duration-ms="2923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:13 PDT" name="pageSetup" finished-at="2025-05-19T18:36:13 PDT" duration-ms="343" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:11 PDT" name="pageSetup" finished-at="2025-05-20T18:20:11 PDT" duration-ms="376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithInvalidConfirmPwd(java.lang.String)[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:13 PDT" name="registerValidationWithInvalidConfirmPwd" finished-at="2025-05-19T18:36:26 PDT" depends-on-methods="tests.RegisterTest.registerValidationWithoutUserInfo" duration-ms="13003" status="PASS">
+        <test-method signature="registerValidationWithInvalidConfirmPwd(java.lang.String)[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:11 PDT" name="registerValidationWithInvalidConfirmPwd" finished-at="2025-05-20T18:20:38 PDT" depends-on-methods="tests.RegisterTest.registerValidationWithoutUserInfo" duration-ms="27029" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,19 +70,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerValidationWithInvalidConfirmPwd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:26 PDT" name="tearDown" finished-at="2025-05-19T18:36:26 PDT" duration-ms="329" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:38 PDT" name="tearDown" finished-at="2025-05-20T18:20:39 PDT" duration-ms="347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:26 PDT" name="setUp" finished-at="2025-05-19T18:36:29 PDT" duration-ms="2418" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:39 PDT" name="setUp" finished-at="2025-05-20T18:20:43 PDT" duration-ms="3984" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:29 PDT" name="pageSetup" finished-at="2025-05-19T18:36:29 PDT" duration-ms="355" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:43 PDT" name="pageSetup" finished-at="2025-05-20T18:20:43 PDT" duration-ms="365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithInvalidData(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:29 PDT" name="registerValidationWithInvalidData" data-provider="registerPageData" finished-at="2025-05-19T18:36:43 PDT" duration-ms="14222" status="PASS">
+        <test-method signature="registerValidationWithInvalidData(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:43 PDT" name="registerValidationWithInvalidData" data-provider="registerPageData" finished-at="2025-05-20T18:20:57 PDT" duration-ms="14121" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,19 +103,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerValidationWithInvalidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:43 PDT" name="tearDown" finished-at="2025-05-19T18:36:44 PDT" duration-ms="998" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:57 PDT" name="tearDown" finished-at="2025-05-20T18:20:58 PDT" duration-ms="413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:44 PDT" name="setUp" finished-at="2025-05-19T18:36:46 PDT" duration-ms="2262" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:58 PDT" name="setUp" finished-at="2025-05-20T18:21:01 PDT" duration-ms="3553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:46 PDT" name="pageSetup" finished-at="2025-05-19T18:36:47 PDT" duration-ms="781" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:01 PDT" name="pageSetup" finished-at="2025-05-20T18:21:02 PDT" duration-ms="344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithInvalidData(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:36:47 PDT" name="registerValidationWithInvalidData" data-provider="registerPageData" finished-at="2025-05-19T18:37:01 PDT" duration-ms="13691" status="PASS">
+        <test-method signature="registerValidationWithInvalidData(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:02 PDT" name="registerValidationWithInvalidData" data-provider="registerPageData" finished-at="2025-05-20T18:21:15 PDT" duration-ms="13513" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -132,19 +136,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerValidationWithInvalidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:01 PDT" name="tearDown" finished-at="2025-05-19T18:37:02 PDT" duration-ms="627" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:15 PDT" name="tearDown" finished-at="2025-05-20T18:21:16 PDT" duration-ms="390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:02 PDT" name="setUp" finished-at="2025-05-19T18:37:04 PDT" duration-ms="2409" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:16 PDT" name="setUp" finished-at="2025-05-20T18:21:19 PDT" duration-ms="3100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:04 PDT" name="pageSetup" finished-at="2025-05-19T18:37:05 PDT" duration-ms="827" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:19 PDT" name="pageSetup" finished-at="2025-05-20T18:21:19 PDT" duration-ms="366" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithInvalidData(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:05 PDT" name="registerValidationWithInvalidData" data-provider="registerPageData" finished-at="2025-05-19T18:37:19 PDT" duration-ms="14151" status="PASS">
+        <test-method signature="registerValidationWithInvalidData(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:19 PDT" name="registerValidationWithInvalidData" data-provider="registerPageData" finished-at="2025-05-20T18:21:32 PDT" duration-ms="13175" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -165,19 +169,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerValidationWithInvalidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:19 PDT" name="tearDown" finished-at="2025-05-19T18:37:19 PDT" duration-ms="391" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:32 PDT" name="tearDown" finished-at="2025-05-20T18:21:33 PDT" duration-ms="391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:19 PDT" name="setUp" finished-at="2025-05-19T18:37:22 PDT" duration-ms="2486" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:33 PDT" name="setUp" finished-at="2025-05-20T18:21:35 PDT" duration-ms="2384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:22 PDT" name="pageSetup" finished-at="2025-05-19T18:37:22 PDT" duration-ms="340" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:35 PDT" name="pageSetup" finished-at="2025-05-20T18:21:36 PDT" duration-ms="698" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="registerWithValidData(java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:22 PDT" name="registerWithValidData" data-provider="registerPageDataValid" finished-at="2025-05-19T18:37:36 PDT" duration-ms="13515" status="FAIL">
+        <test-method signature="registerWithValidData(java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:36 PDT" name="registerWithValidData" data-provider="registerPageDataValid" finished-at="2025-05-20T18:21:50 PDT" duration-ms="14212" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -240,19 +244,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWithValidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:36 PDT" name="tearDown" finished-at="2025-05-19T18:37:36 PDT" duration-ms="413" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:50 PDT" name="tearDown" finished-at="2025-05-20T18:21:50 PDT" duration-ms="346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:36 PDT" name="setUp" finished-at="2025-05-19T18:37:38 PDT" duration-ms="2360" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:50 PDT" name="setUp" finished-at="2025-05-20T18:21:53 PDT" duration-ms="2771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:38 PDT" name="pageSetup" finished-at="2025-05-19T18:37:39 PDT" duration-ms="384" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:53 PDT" name="pageSetup" finished-at="2025-05-20T18:21:54 PDT" duration-ms="336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="loginButtonValidationOnRegisterPage(java.lang.String)[pri:6, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:39 PDT" name="loginButtonValidationOnRegisterPage" finished-at="2025-05-19T18:37:39 PDT" duration-ms="306" status="PASS">
+        <test-method signature="loginButtonValidationOnRegisterPage(java.lang.String)[pri:6, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:54 PDT" name="loginButtonValidationOnRegisterPage" finished-at="2025-05-20T18:21:54 PDT" duration-ms="314" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -263,1085 +267,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginButtonValidationOnRegisterPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@4a668b6e]" started-at="2025-05-19T18:37:39 PDT" name="tearDown" finished-at="2025-05-19T18:37:39 PDT" duration-ms="327" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:54 PDT" name="tearDown" finished-at="2025-05-20T18:21:54 PDT" duration-ms="285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.RegisterTest -->
-      <class name="tests.DataStructureIntroTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:34 PDT" name="setUp" finished-at="2025-05-19T18:34:38 PDT" duration-ms="3499" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:38 PDT" name="pageSetup" finished-at="2025-05-19T18:34:39 PDT" duration-ms="1476" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="dataStructureValidation(java.lang.String)[pri:1, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:39 PDT" name="dataStructureValidation" data-provider="dataStructureTitle" finished-at="2025-05-19T18:34:40 PDT" duration-ms="1115" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Data Structures-Introduction]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataStructureValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:40 PDT" name="tearDown" finished-at="2025-05-19T18:34:41 PDT" duration-ms="333" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:41 PDT" name="setUp" finished-at="2025-05-19T18:34:43 PDT" duration-ms="2177" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:43 PDT" name="pageSetup" finished-at="2025-05-19T18:34:44 PDT" duration-ms="1410" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="timeComplexity(java.lang.String)[pri:2, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:44 PDT" name="timeComplexity" finished-at="2025-05-19T18:34:45 PDT" duration-ms="971" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Time Complexity]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- timeComplexity -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:45 PDT" name="tearDown" finished-at="2025-05-19T18:34:45 PDT" duration-ms="284" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:45 PDT" name="setUp" finished-at="2025-05-19T18:34:48 PDT" duration-ms="2178" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:48 PDT" name="pageSetup" finished-at="2025-05-19T18:34:49 PDT" duration-ms="1437" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="practiceQuestionsLinkValidation(java.lang.String)[pri:3, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:49 PDT" name="practiceQuestionsLinkValidation" data-provider="practiceQuestTitle" finished-at="2025-05-19T18:34:50 PDT" duration-ms="1247" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Practice Questions]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- practiceQuestionsLinkValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:50 PDT" name="tearDown" finished-at="2025-05-19T18:34:51 PDT" duration-ms="280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:51 PDT" name="setUp" finished-at="2025-05-19T18:34:53 PDT" duration-ms="2194" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:53 PDT" name="pageSetup" finished-at="2025-05-19T18:34:54 PDT" duration-ms="1417" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryhereValidation(java.lang.String)[pri:4, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:54 PDT" name="tryhereValidation" data-provider="tryEditorTitle" finished-at="2025-05-19T18:34:58 PDT" duration-ms="3783" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryhereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:58 PDT" name="tearDown" finished-at="2025-05-19T18:34:58 PDT" duration-ms="305" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:34:58 PDT" name="setUp" finished-at="2025-05-19T18:35:00 PDT" duration-ms="2169" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:00 PDT" name="pageSetup" finished-at="2025-05-19T18:35:02 PDT" duration-ms="1429" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryEditorValidationWithoutCode()[pri:5, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:02 PDT" name="tryEditorValidationWithoutCode" finished-at="2025-05-19T18:35:04 PDT" duration-ms="2496" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryEditorValidationWithoutCode -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:04 PDT" name="tearDown" finished-at="2025-05-19T18:35:05 PDT" duration-ms="289" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:05 PDT" name="setUp" finished-at="2025-05-19T18:35:07 PDT" duration-ms="1950" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:07 PDT" name="pageSetup" finished-at="2025-05-19T18:35:08 PDT" duration-ms="1387" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="incorrectPythonCodeValidation()[pri:6, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:08 PDT" name="incorrectPythonCodeValidation" finished-at="2025-05-19T18:35:25 PDT" duration-ms="16839" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- incorrectPythonCodeValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:25 PDT" name="tearDown" finished-at="2025-05-19T18:35:25 PDT" duration-ms="524" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:25 PDT" name="setUp" finished-at="2025-05-19T18:35:30 PDT" duration-ms="4306" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:30 PDT" name="pageSetup" finished-at="2025-05-19T18:35:31 PDT" duration-ms="1762" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="validPythonCodeValidation()[pri:7, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:31 PDT" name="validPythonCodeValidation" finished-at="2025-05-19T18:35:49 PDT" duration-ms="17616" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validPythonCodeValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:49 PDT" name="tearDown" finished-at="2025-05-19T18:35:49 PDT" duration-ms="367" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:49 PDT" name="setUp" finished-at="2025-05-19T18:35:52 PDT" duration-ms="2921" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:52 PDT" name="pageSetup" finished-at="2025-05-19T18:35:54 PDT" duration-ms="1381" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="navigateBack(java.lang.String)[pri:8, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:54 PDT" name="navigateBack" finished-at="2025-05-19T18:35:57 PDT" duration-ms="3430" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Time Complexity]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateBack -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:57 PDT" name="tearDown" finished-at="2025-05-19T18:35:57 PDT" duration-ms="282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:35:57 PDT" name="setUp" finished-at="2025-05-19T18:36:00 PDT" duration-ms="2240" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:36:00 PDT" name="pageSetup" finished-at="2025-05-19T18:36:01 PDT" duration-ms="1560" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="signoutValidation(java.lang.String)[pri:9, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:36:01 PDT" name="signoutValidation" finished-at="2025-05-19T18:36:04 PDT" duration-ms="3018" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[NumpyNinja]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signoutValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DataStructureIntroTest@58ea606c]" started-at="2025-05-19T18:36:04 PDT" name="tearDown" finished-at="2025-05-19T18:36:05 PDT" duration-ms="294" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.DataStructureIntroTest -->
-      <class name="tests.TreeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:39 PDT" name="setUp" finished-at="2025-05-19T18:37:42 PDT" duration-ms="2432" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:42 PDT" name="pageSetup" finished-at="2025-05-19T18:37:43 PDT" duration-ms="1498" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageValidation(java.lang.String)[pri:1, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:43 PDT" name="treePageValidation" finished-at="2025-05-19T18:37:44 PDT" duration-ms="668" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:44 PDT" name="tearDown" finished-at="2025-05-19T18:37:45 PDT" duration-ms="546" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:45 PDT" name="setUp" finished-at="2025-05-19T18:37:47 PDT" duration-ms="2816" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:47 PDT" name="pageSetup" finished-at="2025-05-19T18:37:49 PDT" duration-ms="1518" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="headrElementsValidation()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:49 PDT" name="headrElementsValidation" finished-at="2025-05-19T18:37:49 PDT" depends-on-methods="tests.TreeTest.treePageValidation" duration-ms="143" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- headrElementsValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:49 PDT" name="tearDown" finished-at="2025-05-19T18:37:49 PDT" duration-ms="287" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:49 PDT" name="setUp" finished-at="2025-05-19T18:37:51 PDT" duration-ms="2007" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:51 PDT" name="pageSetup" finished-at="2025-05-19T18:37:53 PDT" duration-ms="1385" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:53 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:37:54 PDT" duration-ms="1265" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Overview of Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Overview of Trees]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:54 PDT" name="tearDown" finished-at="2025-05-19T18:37:54 PDT" duration-ms="281" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:54 PDT" name="setUp" finished-at="2025-05-19T18:37:57 PDT" duration-ms="2305" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:57 PDT" name="pageSetup" finished-at="2025-05-19T18:37:58 PDT" duration-ms="1528" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:37:58 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:00 PDT" duration-ms="1507" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Terminologies]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Terminologies]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:00 PDT" name="tearDown" finished-at="2025-05-19T18:38:00 PDT" duration-ms="358" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:00 PDT" name="setUp" finished-at="2025-05-19T18:38:03 PDT" duration-ms="2579" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:03 PDT" name="pageSetup" finished-at="2025-05-19T18:38:03 PDT" duration-ms="766" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:03 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:05 PDT" duration-ms="2103" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Types of Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Types of Trees]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:05 PDT" name="tearDown" finished-at="2025-05-19T18:38:06 PDT" duration-ms="279" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:06 PDT" name="setUp" finished-at="2025-05-19T18:38:08 PDT" duration-ms="2344" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:08 PDT" name="pageSetup" finished-at="2025-05-19T18:38:10 PDT" duration-ms="1400" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:10 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:11 PDT" duration-ms="1732" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tree Traversals]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Tree Traversals]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:11 PDT" name="tearDown" finished-at="2025-05-19T18:38:12 PDT" duration-ms="291" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:12 PDT" name="setUp" finished-at="2025-05-19T18:38:14 PDT" duration-ms="2157" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:14 PDT" name="pageSetup" finished-at="2025-05-19T18:38:15 PDT" duration-ms="1501" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:15 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:16 PDT" duration-ms="1195" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Traversals-Illustration]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Traversals-Illustration]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:16 PDT" name="tearDown" finished-at="2025-05-19T18:38:17 PDT" duration-ms="313" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:17 PDT" name="setUp" finished-at="2025-05-19T18:38:19 PDT" duration-ms="2194" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:19 PDT" name="pageSetup" finished-at="2025-05-19T18:38:20 PDT" duration-ms="1420" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:20 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:22 PDT" duration-ms="1242" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Binary Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Binary Trees]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:22 PDT" name="tearDown" finished-at="2025-05-19T18:38:22 PDT" duration-ms="306" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:22 PDT" name="setUp" finished-at="2025-05-19T18:38:24 PDT" duration-ms="2167" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:24 PDT" name="pageSetup" finished-at="2025-05-19T18:38:26 PDT" duration-ms="1545" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:26 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:27 PDT" duration-ms="1783" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Types of Binary Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Types of Binary Trees]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:27 PDT" name="tearDown" finished-at="2025-05-19T18:38:28 PDT" duration-ms="290" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:28 PDT" name="setUp" finished-at="2025-05-19T18:38:30 PDT" duration-ms="2526" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:30 PDT" name="pageSetup" finished-at="2025-05-19T18:38:32 PDT" duration-ms="1427" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:32 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:33 PDT" duration-ms="1887" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Implementation in Python]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Implementation in Python]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:33 PDT" name="tearDown" finished-at="2025-05-19T18:38:34 PDT" duration-ms="279" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:34 PDT" name="setUp" finished-at="2025-05-19T18:38:36 PDT" duration-ms="2408" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:36 PDT" name="pageSetup" finished-at="2025-05-19T18:38:38 PDT" duration-ms="1411" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:38 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:39 PDT" duration-ms="1746" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Binary Tree Traversals]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Binary Tree Traversals]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:39 PDT" name="tearDown" finished-at="2025-05-19T18:38:40 PDT" duration-ms="380" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:40 PDT" name="setUp" finished-at="2025-05-19T18:38:43 PDT" duration-ms="2907" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:43 PDT" name="pageSetup" finished-at="2025-05-19T18:38:44 PDT" duration-ms="1372" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:44 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:45 PDT" duration-ms="1130" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Implementation of Binary Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Implementation of Binary Trees]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:45 PDT" name="tearDown" finished-at="2025-05-19T18:38:45 PDT" duration-ms="306" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:45 PDT" name="setUp" finished-at="2025-05-19T18:38:48 PDT" duration-ms="2393" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:48 PDT" name="pageSetup" finished-at="2025-05-19T18:38:49 PDT" duration-ms="1471" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:49 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:50 PDT" duration-ms="1133" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Applications of Binary trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Applications of Binary trees]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:50 PDT" name="tearDown" finished-at="2025-05-19T18:38:51 PDT" duration-ms="276" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:51 PDT" name="setUp" finished-at="2025-05-19T18:38:53 PDT" duration-ms="2596" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:53 PDT" name="pageSetup" finished-at="2025-05-19T18:38:55 PDT" duration-ms="1786" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:55 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:38:56 PDT" duration-ms="1340" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Binary Search Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Binary Search Trees]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:56 PDT" name="tearDown" finished-at="2025-05-19T18:38:57 PDT" duration-ms="283" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:57 PDT" name="setUp" finished-at="2025-05-19T18:38:59 PDT" duration-ms="2397" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:38:59 PDT" name="pageSetup" finished-at="2025-05-19T18:39:01 PDT" duration-ms="1426" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="treePageLinksValidation(java.lang.String,java.lang.String)[pri:2, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:01 PDT" name="treePageLinksValidation" data-provider="treePageLinks" finished-at="2025-05-19T18:39:02 PDT" duration-ms="1476" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Implementation Of BST]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Implementation Of BST]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- treePageLinksValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:02 PDT" name="tearDown" finished-at="2025-05-19T18:39:02 PDT" duration-ms="283" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:02 PDT" name="setUp" finished-at="2025-05-19T18:39:04 PDT" duration-ms="2129" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:04 PDT" name="pageSetup" finished-at="2025-05-19T18:39:06 PDT" duration-ms="1389" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:06 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:39:11 PDT" duration-ms="4856" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Overview of Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:11 PDT" name="tearDown" finished-at="2025-05-19T18:39:11 PDT" duration-ms="438" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:11 PDT" name="setUp" finished-at="2025-05-19T18:39:13 PDT" duration-ms="2310" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:13 PDT" name="pageSetup" finished-at="2025-05-19T18:39:15 PDT" duration-ms="1393" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:15 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:39:18 PDT" duration-ms="2792" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Terminologies]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:18 PDT" name="tearDown" finished-at="2025-05-19T18:39:18 PDT" duration-ms="296" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:18 PDT" name="setUp" finished-at="2025-05-19T18:39:20 PDT" duration-ms="2338" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:20 PDT" name="pageSetup" finished-at="2025-05-19T18:39:22 PDT" duration-ms="1514" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:22 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:39:26 PDT" duration-ms="4337" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Types of Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:26 PDT" name="tearDown" finished-at="2025-05-19T18:39:26 PDT" duration-ms="306" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:26 PDT" name="setUp" finished-at="2025-05-19T18:39:29 PDT" duration-ms="2093" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:29 PDT" name="pageSetup" finished-at="2025-05-19T18:39:30 PDT" duration-ms="1442" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:30 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:39:35 PDT" duration-ms="4899" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tree Traversals]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:35 PDT" name="tearDown" finished-at="2025-05-19T18:39:35 PDT" duration-ms="273" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:35 PDT" name="setUp" finished-at="2025-05-19T18:39:37 PDT" duration-ms="2083" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:37 PDT" name="pageSetup" finished-at="2025-05-19T18:39:39 PDT" duration-ms="1419" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:39 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:39:42 PDT" duration-ms="3519" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Traversals-Illustration]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:42 PDT" name="tearDown" finished-at="2025-05-19T18:39:42 PDT" duration-ms="293" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:42 PDT" name="setUp" finished-at="2025-05-19T18:39:44 PDT" duration-ms="1676" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:44 PDT" name="pageSetup" finished-at="2025-05-19T18:39:46 PDT" duration-ms="1785" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:46 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:39:50 PDT" duration-ms="4112" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Binary Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:50 PDT" name="tearDown" finished-at="2025-05-19T18:39:50 PDT" duration-ms="466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:50 PDT" name="setUp" finished-at="2025-05-19T18:39:54 PDT" duration-ms="3466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:54 PDT" name="pageSetup" finished-at="2025-05-19T18:39:55 PDT" duration-ms="1481" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:39:55 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:40:01 PDT" duration-ms="5298" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Types of Binary Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:01 PDT" name="tearDown" finished-at="2025-05-19T18:40:01 PDT" duration-ms="302" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:01 PDT" name="setUp" finished-at="2025-05-19T18:40:03 PDT" duration-ms="2113" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:03 PDT" name="pageSetup" finished-at="2025-05-19T18:40:04 PDT" duration-ms="845" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:04 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:40:09 PDT" duration-ms="5021" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Implementation in Python]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:09 PDT" name="tearDown" finished-at="2025-05-19T18:40:09 PDT" duration-ms="301" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:09 PDT" name="setUp" finished-at="2025-05-19T18:40:11 PDT" duration-ms="2093" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:11 PDT" name="pageSetup" finished-at="2025-05-19T18:40:13 PDT" duration-ms="1376" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:13 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:40:16 PDT" duration-ms="2897" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Binary Tree Traversals]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:16 PDT" name="tearDown" finished-at="2025-05-19T18:40:16 PDT" duration-ms="351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:16 PDT" name="setUp" finished-at="2025-05-19T18:40:18 PDT" duration-ms="2403" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:18 PDT" name="pageSetup" finished-at="2025-05-19T18:40:20 PDT" duration-ms="1352" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:20 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:40:24 PDT" duration-ms="3823" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Implementation of Binary Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:24 PDT" name="tearDown" finished-at="2025-05-19T18:40:24 PDT" duration-ms="351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:24 PDT" name="setUp" finished-at="2025-05-19T18:40:26 PDT" duration-ms="2372" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:26 PDT" name="pageSetup" finished-at="2025-05-19T18:40:28 PDT" duration-ms="1393" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:28 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:40:33 PDT" duration-ms="5589" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Applications of Binary trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:33 PDT" name="tearDown" finished-at="2025-05-19T18:40:34 PDT" duration-ms="298" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:34 PDT" name="setUp" finished-at="2025-05-19T18:40:36 PDT" duration-ms="2057" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:36 PDT" name="pageSetup" finished-at="2025-05-19T18:40:37 PDT" duration-ms="1435" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:37 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:40:43 PDT" duration-ms="5795" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Binary Search Trees]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:43 PDT" name="tearDown" finished-at="2025-05-19T18:40:43 PDT" duration-ms="272" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:43 PDT" name="setUp" finished-at="2025-05-19T18:40:45 PDT" duration-ms="2024" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:45 PDT" name="pageSetup" finished-at="2025-05-19T18:40:47 PDT" duration-ms="1445" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryHereValidation(java.lang.String,java.lang.String)[pri:3, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:47 PDT" name="tryHereValidation" data-provider="treeLinks" finished-at="2025-05-19T18:40:52 PDT" duration-ms="4871" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Implementation Of BST]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Assessment]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryHereValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:52 PDT" name="tearDown" finished-at="2025-05-19T18:40:52 PDT" duration-ms="287" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:52 PDT" name="setUp" finished-at="2025-05-19T18:40:54 PDT" duration-ms="2565" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:54 PDT" name="pageSetup" finished-at="2025-05-19T18:40:56 PDT" duration-ms="1450" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="practiceQuestionValidation(java.lang.String)[pri:4, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:56 PDT" name="practiceQuestionValidation" finished-at="2025-05-19T18:40:58 PDT" duration-ms="2219" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Practice Questions]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- practiceQuestionValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:58 PDT" name="tearDown" finished-at="2025-05-19T18:40:58 PDT" duration-ms="286" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:40:58 PDT" name="setUp" finished-at="2025-05-19T18:41:01 PDT" duration-ms="2204" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:01 PDT" name="pageSetup" finished-at="2025-05-19T18:41:02 PDT" duration-ms="1437" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="tryEditorValidationWithoutCode()[pri:5, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:02 PDT" name="tryEditorValidationWithoutCode" finished-at="2025-05-19T18:41:08 PDT" duration-ms="6313" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tryEditorValidationWithoutCode -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:08 PDT" name="tearDown" finished-at="2025-05-19T18:41:09 PDT" duration-ms="351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:09 PDT" name="setUp" finished-at="2025-05-19T18:41:11 PDT" duration-ms="2155" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:11 PDT" name="pageSetup" finished-at="2025-05-19T18:41:12 PDT" duration-ms="1496" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="incorrectPythonCodeValidation()[pri:6, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:12 PDT" name="incorrectPythonCodeValidation" finished-at="2025-05-19T18:41:31 PDT" duration-ms="18228" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- incorrectPythonCodeValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:31 PDT" name="tearDown" finished-at="2025-05-19T18:41:31 PDT" duration-ms="310" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:31 PDT" name="setUp" finished-at="2025-05-19T18:41:33 PDT" duration-ms="2089" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:33 PDT" name="pageSetup" finished-at="2025-05-19T18:41:34 PDT" duration-ms="834" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="validPythonCodeValidation()[pri:7, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:34 PDT" name="validPythonCodeValidation" finished-at="2025-05-19T18:41:52 PDT" duration-ms="18172" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validPythonCodeValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:52 PDT" name="tearDown" finished-at="2025-05-19T18:41:52 PDT" duration-ms="392" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:52 PDT" name="setUp" finished-at="2025-05-19T18:41:55 PDT" duration-ms="2541" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:55 PDT" name="pageSetup" finished-at="2025-05-19T18:41:57 PDT" duration-ms="1679" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="navigateBack(java.lang.String)[pri:8, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:41:57 PDT" name="navigateBack" finished-at="2025-05-19T18:42:00 PDT" duration-ms="3803" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Overview of Trees]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateBack -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:42:00 PDT" name="tearDown" finished-at="2025-05-19T18:42:01 PDT" duration-ms="266" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:42:01 PDT" name="setUp" finished-at="2025-05-19T18:42:03 PDT" duration-ms="2081" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:42:03 PDT" name="pageSetup" finished-at="2025-05-19T18:42:04 PDT" duration-ms="1397" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="signoutValidation(java.lang.String)[pri:9, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:42:04 PDT" name="signoutValidation" finished-at="2025-05-19T18:42:06 PDT" duration-ms="1628" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[NumpyNinja]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signoutValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TreeTest@5f683daf]" started-at="2025-05-19T18:42:06 PDT" name="tearDown" finished-at="2025-05-19T18:42:06 PDT" duration-ms="312" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.TreeTest -->
     </test> <!-- dsAlgoModules -->
   </suite> <!-- ds-algo -->
 
