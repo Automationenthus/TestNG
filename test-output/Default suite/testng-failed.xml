@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TreeTest">
+      <class name="tests.RegisterTest">
         <methods>
-          <include name="treePageValidation"/>
           <include name="setUp"/>
-          <include name="practiceQuestionValidation" invocation-numbers="0"/>
           <include name="pageSetup"/>
+          <include name="registerWithValidData" invocation-numbers="0"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- tests.TreeTest -->
+      </class> <!-- tests.RegisterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
