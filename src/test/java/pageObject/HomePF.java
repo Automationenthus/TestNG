@@ -95,5 +95,6 @@ public class HomePF {
 	public boolean isSignin() {
 		return signIn.isDisplayed();
 	}
+	
 
 }

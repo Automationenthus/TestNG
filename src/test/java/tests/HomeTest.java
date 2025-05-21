@@ -28,6 +28,7 @@ public class HomeTest {
 		hpf.launchurl();
 		LogHandler.info("Launching URL");
 		hpf.getstartedbuttonclick();
+		
 	}
 	
 	@Test(priority = 1)
@@ -40,5 +41,9 @@ public class HomeTest {
 		LogHandler.info("All the elements are visible in header");
 
 }
+	//@Test(priority = 2)
+	//public void the_user_should_get_()
+	
+	
 }
 

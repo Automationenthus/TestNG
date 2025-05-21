@@ -48,18 +48,17 @@ public class DriverFactory {
 		return tldriver.get();
 	}
 
-	
-		
-		@AfterMethod
-		public void tearDown() {
-			if (getDriver() != null) {
-				getDriver().quit();
-				tldriver.remove();
-			}
+	@AfterMethod
+	public void tearDown() {
+		if (getDriver() != null) {
+			getDriver().quit();
+			tldriver.remove();
 		}
-
-		public static ConfigReader configReader() {
-			return configFileReader;
-		
 	}
+
+	public static ConfigReader configReader() {
+		return configFileReader;
+
+	}
+
 }
