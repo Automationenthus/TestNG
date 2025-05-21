@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import driverFactory.DriverFactory;
+//import utilities.ConfigReader;
 import utilities.ConfigReader;
 import java.io.File;
 import java.io.IOException;

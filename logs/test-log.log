@@ -140,3 +140,4 @@
 2025-05-20 18:21:32 INFO  LogHandler:12 - user should see Please fill out this field.
 2025-05-20 18:21:50 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
 2025-05-20 18:21:54 INFO  LogHandler:12 - user is on Login
+2025-05-20 23:44:53 INFO  LogHandler:12 - user is on: Data Structures-Introduction
