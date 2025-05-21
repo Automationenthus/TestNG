@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+
       <class name="tests.TreeTest">
         <methods>
           <include name="treePageValidation"/>
@@ -12,6 +13,14 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.TreeTest -->
+
+      <class name="tests.ArrayTest">
+        <methods>
+          <include name="loginAndSetUp"/>
+          <include name="verifyArraysNavigation"/>
+        </methods>
+      </class> <!-- tests.ArrayTest -->
+
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

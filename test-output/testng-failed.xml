@@ -3,6 +3,7 @@
 <suite name="Failed suite [ds-algo]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="dsAlgoModules(failed)">
     <classes>
+
       <class name="tests.RegisterTest">
         <methods>
           <include name="setUp"/>
@@ -11,6 +12,14 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.RegisterTest -->
+
+      <class name="tests.ArrayTest">
+        <methods>
+          <include name="loginAndSetUp"/>
+          <include name="verifyArraysNavigation"/>
+        </methods>
+      </class> <!-- tests.ArrayTest -->
+
     </classes>
   </test> <!-- dsAlgoModules(failed) -->
 </suite> <!-- Failed suite [ds-algo] -->
