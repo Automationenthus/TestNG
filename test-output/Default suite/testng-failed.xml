@@ -3,14 +3,31 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="tests.RegisterTest">
+=======
+
+      <class name="tests.TreeTest">
+>>>>>>> main
         <methods>
           <include name="setUp"/>
           <include name="pageSetup"/>
           <include name="registerWithValidData" invocation-numbers="0"/>
           <include name="tearDown"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- tests.RegisterTest -->
+=======
+      </class> <!-- tests.TreeTest -->
+
+      <class name="tests.ArrayTest">
+        <methods>
+          <include name="loginAndSetUp"/>
+          <include name="verifyArraysNavigation"/>
+        </methods>
+      </class> <!-- tests.ArrayTest -->
+
+>>>>>>> main
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
