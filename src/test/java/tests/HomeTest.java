@@ -41,8 +41,11 @@ public class HomeTest {
 		LogHandler.info("All the elements are visible in header");
 
 }
-	//@Test(priority = 2)
-	//public void the_user_should_get_()
+	@Test(priority = 2)
+	public void the_user_clicks_getstarted_without_login() {
+		
+		
+	}
 	
 	
 }

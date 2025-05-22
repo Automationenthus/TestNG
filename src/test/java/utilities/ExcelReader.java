@@ -22,7 +22,8 @@ public class ExcelReader {
 	public static Map<String, String> getDataByScenario(String sheetName, String scenarioType) {
 		Map<String, String> dataMap = new HashMap<>();
 		IOUtils.setByteArrayMaxOverride(200_000_000);
-		
+		System.out.println("Excel reader getDataByScenario Method");
+		ConfigReader c = new ConfigReader();
 		FILE_PATH = ConfigReader.getProperties("excelfilepath");
 
 		try (FileInputStream fis = new FileInputStream(FILE_PATH); Workbook workbook = new XSSFWorkbook(fis)) {

@@ -19,7 +19,6 @@ public class ConfigReader {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	public static String getProperties(String key) {
