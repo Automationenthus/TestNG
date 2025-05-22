@@ -45,6 +45,7 @@ public class StackTest extends Hooks {
     @Test(priority=1) 
     public void verifyUserIsInStackPage() {
     	stackpage.navigateTostackPage();
+    	LogHandler.info("Navigated to Stack page.");
         Assert.assertTrue(driver.getTitle().contains("Stack"), "incorrect page");
     }
     
@@ -62,6 +63,7 @@ public class StackTest extends Hooks {
 	 public void VerifyTryHere() {
 		 
     	stackpage.navigateToStackstryeditorPage();
+    	LogHandler.info("Navigated to Try Editor page.");
 		 Assert.assertTrue(stackpage.isRunButtonVisible(), "Run button not visible");
 	 }
     
@@ -73,7 +75,7 @@ public class StackTest extends Hooks {
         stackpage.clickRunButton();
         String alertText = stackpage.getAlertTextAndAccept();
         if (alertText == null) {
-            System.out.println("WARN: Bug - No alert shown for empty code.");
+        	LogHandler.info("Bug - No alert shown for empty code.");
             Assert.fail("Bug: No alert displayed when clicking Run without entering code.");
         } else {
             Assert.assertTrue(alertText.toLowerCase().contains("error"),
@@ -130,4 +132,3 @@ public void Signout(@Optional("NumpyNinja") String expectd) {
 	
 } 
 }
-

@@ -13,3 +13,5 @@
 2025-05-16 22:52:54 INFO  LogHandler:12 - answer is: hello
 2025-05-16 22:53:01 INFO  LogHandler:12 - user successfully navigated back to: Time Complexity
 2025-05-16 22:53:09 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
+2025-05-21 20:14:56 INFO  LogHandler:12 - Navigated to Arrays page.
+2025-05-21 20:15:16 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja

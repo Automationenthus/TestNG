@@ -6,7 +6,9 @@
       <class name="tests.ArrayTest">
         <methods>
           <include name="loginAndSetUp"/>
-          <include name="verifyArraysNavigation"/>
+          <include name="setUp"/>
+          <include name="ValidcodeandSubmitSortedSquares"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- tests.ArrayTest -->
     </classes>
