@@ -70,6 +70,79 @@
 2025-05-19 18:41:52 INFO  LogHandler:12 - answer is: not exist
 2025-05-19 18:42:00 INFO  LogHandler:12 - user successfully navigated back to: Overview of Trees
 2025-05-19 18:42:06 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
+
 2025-05-21 19:49:25 INFO  LogHandler:12 - Bug - No alert shown for empty code.
 2025-05-21 19:51:28 INFO  LogHandler:12 - Bug - No alert shown for empty code.
 2025-05-21 19:51:40 INFO  LogHandler:12 - Navigated to Try Editor page.
+
+2025-05-20 13:04:41 INFO  LogHandler:12 - user is on: Time Complexity
+2025-05-20 17:12:59 INFO  LogHandler:12 - user is on: Data Structures-Introduction
+2025-05-20 17:13:04 INFO  LogHandler:12 - user is on: Time Complexity
+2025-05-20 17:13:10 INFO  LogHandler:12 - user is on: Practice Questions
+2025-05-20 17:13:17 INFO  LogHandler:12 - user is on: Assessment
+2025-05-20 17:13:25 INFO  LogHandler:12 - alert not found
+2025-05-20 17:13:56 INFO  LogHandler:12 - alert text is: NameError: name 'hello' is not defined on line 1
+2025-05-20 17:14:22 INFO  LogHandler:12 - answer is: hello
+2025-05-20 17:14:32 INFO  LogHandler:12 - user successfully navigated back to: Time Complexity
+2025-05-20 17:14:42 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
+2025-05-20 17:14:52 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:15:11 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
+2025-05-20 17:15:29 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:15:48 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:16:07 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:16:27 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
+2025-05-20 17:21:55 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:22:15 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
+2025-05-20 17:22:34 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:22:50 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:23:07 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:23:24 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
+2025-05-20 17:23:28 INFO  LogHandler:12 - user is on Login
+2025-05-20 17:37:26 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:37:45 INFO  LogHandler:12 - user is on Login
+2025-05-20 17:40:26 INFO  LogHandler:12 - user is on: Data Structures-Introduction
+2025-05-20 17:40:31 INFO  LogHandler:12 - user is on: Time Complexity
+2025-05-20 17:40:36 INFO  LogHandler:12 - user is on: Practice Questions
+2025-05-20 17:40:42 INFO  LogHandler:12 - user is on: Assessment
+2025-05-20 17:40:49 INFO  LogHandler:12 - alert not found
+2025-05-20 17:41:11 INFO  LogHandler:12 - user successfully navigated back to: Time Complexity
+2025-05-20 17:41:21 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
+2025-05-20 17:42:30 INFO  LogHandler:12 - user is on: Data Structures-Introduction
+2025-05-20 17:42:35 INFO  LogHandler:12 - user is on: Time Complexity
+2025-05-20 17:42:41 INFO  LogHandler:12 - user is on: Practice Questions
+2025-05-20 17:42:49 INFO  LogHandler:12 - user is on: Assessment
+2025-05-20 17:42:57 INFO  LogHandler:12 - alert not found
+2025-05-20 17:43:19 INFO  LogHandler:12 - user successfully navigated back to: Time Complexity
+2025-05-20 17:43:26 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
+2025-05-20 17:50:14 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
+2025-05-20 17:51:21 INFO  LogHandler:12 - alert text is: NameError: name 'hello' is not defined on line 1
+2025-05-20 17:57:32 INFO  LogHandler:12 - user is on: Data Structures-Introduction
+2025-05-20 17:57:38 INFO  LogHandler:12 - user is on: Time Complexity
+2025-05-20 17:57:43 INFO  LogHandler:12 - user is on: Practice Questions
+2025-05-20 17:57:50 INFO  LogHandler:12 - user is on: Assessment
+2025-05-20 17:57:59 INFO  LogHandler:12 - alert not found
+2025-05-20 17:58:22 INFO  LogHandler:12 - alert text is: NameError: name 'hello' is not defined on line 1
+2025-05-20 17:58:45 INFO  LogHandler:12 - answer is: hello
+2025-05-20 17:58:52 INFO  LogHandler:12 - user successfully navigated back to: Time Complexity
+2025-05-20 17:58:59 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
+2025-05-20 17:59:05 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:59:22 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
+2025-05-20 17:59:40 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 17:59:56 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 18:00:13 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 18:00:30 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
+2025-05-20 18:00:34 INFO  LogHandler:12 - user is on Login
+2025-05-20 18:00:38 INFO  LogHandler:12 - user is on: Tree
+2025-05-20 18:04:05 INFO  LogHandler:12 - alert not found
+2025-05-20 18:04:25 INFO  LogHandler:12 - alert text is: NameError: name 'hello' is not defined on line 1
+2025-05-20 18:04:47 INFO  LogHandler:12 - answer is: not exist
+2025-05-20 18:04:55 INFO  LogHandler:12 - user successfully navigated back to: Overview of Trees
+2025-05-20 18:05:01 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
+2025-05-20 18:20:08 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 18:20:38 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
+2025-05-20 18:20:57 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 18:21:15 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 18:21:32 INFO  LogHandler:12 - user should see Please fill out this field.
+2025-05-20 18:21:50 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
+2025-05-20 18:21:54 INFO  LogHandler:12 - user is on Login
+
