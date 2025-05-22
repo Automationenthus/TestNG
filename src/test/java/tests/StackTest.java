@@ -30,10 +30,10 @@ public class StackTest extends Hooks {
     public void loginAndSetUp() {
         driver = DriverFactory.getDriver();
         stackpage = new StackPF(driver);
-        driver.get(ConfigReader.getProperty("url"));
+        driver.get(ConfigReader.getProperties("url"));
         driver.findElement(By.linkText("Sign in")).click();
-        driver.findElement(By.id("id_username")).sendKeys(ConfigReader.getProperty("username"));
-        driver.findElement(By.id("id_password")).sendKeys(ConfigReader.getProperty("password"));
+        driver.findElement(By.id("id_username")).sendKeys(ConfigReader.getProperties("username"));
+        driver.findElement(By.id("id_password")).sendKeys(ConfigReader.getProperties("password"));
         driver.findElement(By.xpath("//input[@value='Login']")).click();
 
         new WebDriverWait(driver, Duration.ofSeconds(10))

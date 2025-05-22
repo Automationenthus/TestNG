@@ -150,10 +150,10 @@ public class DataStructureIntroPF {
 	
 	public void loginBackgroundForPages() {
 		signIn.click();
-		String uname=ConfigReader.getProperty("username");
-		String pwd=ConfigReader.getProperty("password");
-		Login_Username.sendKeys(uname);
-		Login_Password.sendKeys(pwd);
+//		String uname=ConfigReader.getProperty("username");
+//		String pwd=ConfigReader.getProperty("password");
+//		Login_Username.sendKeys(uname);
+//		Login_Password.sendKeys(pwd);
 		Login_Button.click();
 	
 		
