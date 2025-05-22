@@ -21,6 +21,7 @@ import utilities.ExcelReader;
 import utilities.LogHandler;
 
 
+
 public class ArrayTest extends Hooks {
 	ArrayPF arraysPage;
     WebDriver driver;
@@ -44,6 +45,7 @@ public class ArrayTest extends Hooks {
     @Test(priority=1) 
     public void verifyUserIsInArrayPage() {
     	arraysPage.navigateToArraysPage();
+    	LogHandler.info("Navigated to Arrays page.");
         Assert.assertTrue(driver.getTitle().contains("Array"), "incorrect page");
     }
     
@@ -63,6 +65,7 @@ public class ArrayTest extends Hooks {
 	 public void VerifyTryHere() {
 		 
 		 arraysPage.navigateToTryEditorPage();
+		 LogHandler.info("Navigated to Try Editor page.");
 		 Assert.assertTrue(arraysPage.isRunButtonVisible(), "Run button not visible");
 	 }
 	 
@@ -74,7 +77,7 @@ public class ArrayTest extends Hooks {
 	        arraysPage.clickRunButton();
 	        String alertText = arraysPage.getAlertTextAndAccept();
 	        if (alertText == null) {
-	            System.out.println("WARN: Bug - No alert shown for empty code.");
+	        	LogHandler.info("Bug - No alert shown for empty code.");
 	            Assert.fail("Bug: No alert displayed when clicking Run without entering code.");
 	        } else {
 	            Assert.assertTrue(alertText.toLowerCase().contains("error"),
@@ -114,6 +117,7 @@ public class ArrayTest extends Hooks {
 	 public void VerifyPracticeQuestion() {
 		 
 		 arraysPage.navigateToArraysPracticeQuestions();
+		 LogHandler.info("Navigated to Practice Question page.");
 		 Assert.assertTrue(arraysPage.isSearchTheArrayLinkVisible(), "Search the Array link is not visible on Practice page");
 	 }
 	 
@@ -128,7 +132,6 @@ public class ArrayTest extends Hooks {
 	        Assert.assertTrue(arraysPage.isQuestionDisplayed(), "Question not displayed for: " + questionLinkText);
 	        Assert.assertTrue(arraysPage.isRunButton1Visible(), "Run button not visible for: " + questionLinkText);
 	        Assert.assertTrue(arraysPage.isSubmitButtonVisible(), "Submit button not visible for: " + questionLinkText);
-
 	        driver.navigate().back();
 	    }
 	    
@@ -140,7 +143,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String output = arraysPage.getConsoleOutput();
-			System.out.println("Editor Output: " + output);
+			LogHandler.info("Editor Output: " + output);
 		     Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Expected output in console, but found none");
 	 }
@@ -153,7 +156,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String alertText = arraysPage.getAlertTextAndAccept(); 
-			System.out.println("Alert Text: " + alertText);
+			LogHandler.info("Alert Text: " + alertText);
 		    Assert.assertNotNull(alertText, "Expected alert was not present.");
 		    Assert.assertTrue(alertText.toLowerCase().contains("error"),
 			         "Expected alert to contain (SyntaxError/NameError), but got: " + alertText );
@@ -167,7 +170,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String output = arraysPage.getEditorOutput();
-			System.out.println("Editor Output: " + output);
+			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
 		     Assert.assertTrue(output.contains("Submission Successful"),
@@ -182,7 +185,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String output = arraysPage.getEditorOutput();
-			System.out.println("Editor Output: " + output);
+			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
 		     Assert.assertTrue(output.contains("Error occurred"), 
@@ -211,7 +214,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String alertText = arraysPage.getAlertTextAndAccept(); 
-			System.out.println("Alert Text: " + alertText);
+			LogHandler.info("Alert Text: " + alertText);
 		    Assert.assertNotNull(alertText, "Expected alert was not present.");
 		    Assert.assertTrue(alertText.toLowerCase().contains("error"),
 			         "Expected alert to contain (SyntaxError/NameError), but got: " + alertText );
@@ -225,7 +228,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String output = arraysPage.getEditorOutput();
-			System.out.println("Editor Output: " + output);
+			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
 		     Assert.assertTrue(output.contains("Submission Successful"),
@@ -240,7 +243,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String output = arraysPage.getEditorOutput();
-			System.out.println("Editor Output: " + output);
+			LogHandler.info("Editor Output: " + output);;
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
 		     Assert.assertTrue(output.contains("Error occurred"), 
@@ -270,7 +273,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String alertText = arraysPage.getAlertTextAndAccept(); 
-			System.out.println("Alert Text: " + alertText);
+			LogHandler.info("Alert Text: " + alertText);
 		    Assert.assertNotNull(alertText, "Expected alert was not present.");
 		    Assert.assertTrue(alertText.toLowerCase().contains("error"),
 			         "Expected alert to contain (SyntaxError/NameError), but got: " + alertText );
@@ -284,7 +287,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String output = arraysPage.getEditorOutput();
-			System.out.println("Editor Output: " + output);
+			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
 		     Assert.assertTrue(output.contains("Submission Successful"),
@@ -299,7 +302,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String output = arraysPage.getEditorOutput();
-			System.out.println("Editor Output: " + output);
+			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
 		     Assert.assertTrue(output.contains("Error occurred"), 
@@ -329,7 +332,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String alertText = arraysPage.getAlertTextAndAccept(); 
-			System.out.println("Alert Text: " + alertText);
+			LogHandler.info("Alert Text: " + alertText);
 		    Assert.assertNotNull(alertText, "Expected alert was not present.");
 		    Assert.assertTrue(alertText.toLowerCase().contains("error"),
 			         "Expected alert to contain (SyntaxError/NameError), but got: " + alertText );
@@ -343,7 +346,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String output = arraysPage.getEditorOutput();
-			System.out.println("Editor Output: " + output);
+			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
 		     Assert.assertTrue(output.contains("Submission Successful"),
@@ -358,7 +361,7 @@ public class ArrayTest extends Hooks {
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
 			String output = arraysPage.getEditorOutput();
-			System.out.println("Editor Output: " + output);
+			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
 		     Assert.assertTrue(output.contains("Error occurred"), 
