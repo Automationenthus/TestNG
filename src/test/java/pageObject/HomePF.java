@@ -10,8 +10,8 @@ import utilities.ConfigReader;
 
 public class HomePF {
 
-	WebDriver driver = DriverFactory.getDriver();
-	ConfigReader configFileReader = DriverFactory.configReader();
+	WebDriver driver;
+//	ConfigReader configFileReader = DriverFactory.configReader();
 
 	@FindBy(linkText = "Sign in")
 	WebElement signIn;
@@ -23,7 +23,7 @@ public class HomePF {
 	WebElement dropDown;
 	@FindBy(linkText = "Register")
 	WebElement registerLink;
-	@FindBy(xpath = "//button[normalize-space()='Get Started']")
+	@FindBy(xpath = "//button[text()='Get Started']")
 	WebElement getStartedHomeBtn;
 	@FindBy(xpath = "//a[normalize-space()='Data Structures']")
 	WebElement dataStructureDropDown;
@@ -60,20 +60,8 @@ public class HomePF {
 	@FindBy(xpath = "//a[@href='graph']")
 	WebElement graphGetStartedBtn;
 
-	public HomePF() {
+	public HomePF(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-
-	}
-
-	public void launchurl() {
-
-		if (driver != null) {
-
-			driver.get(configFileReader.getProperties("url"));
-		} else {
-
-			throw new RuntimeException("Driver is not initialized in Home_pageFactory");
-		}
 
 	}
 
@@ -97,4 +85,8 @@ public class HomePF {
 	}
 	
 
+
 }
+
+
+

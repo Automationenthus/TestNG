@@ -12,15 +12,13 @@ import utilities.LogHandler;
 
 public class LoginTest extends Hooks {
 
-	HomePF hpf;
+	
 	LoginPF lpf;
 
 	@BeforeMethod
-	public void inintPageObjects() {
-		hpf = new HomePF();
-		lpf = new LoginPF(driver);
-		hpf.launchurl();
-		hpf.getstartedbuttonclick();
+	public void intPageObjects() {
+		 lpf = new LoginPF(driver);
+
 		lpf.click_homesignin();
 	}
 
@@ -75,4 +73,8 @@ public class LoginTest extends Hooks {
 		Assert.assertTrue(loginPage.isyourlogedinmessagevisible(), "You are logged in");
 		LogHandler.info("You are logged in");
 	}
+
 }
+
+
+

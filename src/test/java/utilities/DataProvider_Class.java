@@ -18,7 +18,7 @@ public class DataProvider_Class {
 		String Password = dataMap.get("Password");
 		return new Object[][] { { Username, Password } };
 	}
-	
+
 	@DataProvider(name = "inValidLoginData")
 	public Object[][] provideinValidLoginData() {
 		String sheetName = "Login";
@@ -29,5 +29,4 @@ public class DataProvider_Class {
 		String Password = dataMap.get("Password");
 		return new Object[][] { { Username, Password } };
 	}
-
 }

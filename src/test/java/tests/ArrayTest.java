@@ -2,7 +2,6 @@ package tests;
 
 import java.io.IOException;
 import java.util.Map;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -29,16 +28,13 @@ public class ArrayTest extends Hooks {
 	String ExpectedOutput;
 	String pagetitle;
 	ArrayPF arpf;
-	HomePF hmpf;
 	LoginPF lpf;
 
 	@BeforeMethod
 	public void initPageObjects() {
-		hmpf = new HomePF();
+
 		lpf = new LoginPF(driver);
-		hmpf.launchurl();
 		arpf = new ArrayPF(driver);
-		hmpf.getstartedbuttonclick();
 
 		lpf.click_homesignin();
 		

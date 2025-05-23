@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-05-16 22:30:55 INFO  LogHandler:12 - user is on: Time Complexity
 2025-05-16 22:31:25 INFO  LogHandler:12 - user is on: Time Complexity
 2025-05-16 22:32:04 INFO  LogHandler:12 - user is on: Time Complexity
@@ -146,3 +147,60 @@
 2025-05-20 18:21:50 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
 2025-05-20 18:21:54 INFO  LogHandler:12 - user is on Login
 
+=======
+2025-05-16 10:34:49 INFO  LogHandler:12 - Testing on chrome
+2025-05-16 10:58:42 INFO  LogHandler:12 - Testing on chrome
+2025-05-16 12:46:05 INFO  LogHandler:12 - Testing on chrome
+2025-05-16 12:46:10 INFO  LogHandler:12 - Launching URL
+2025-05-16 12:46:11 INFO  LogHandler:12 - All the elements are visible in header
+2025-05-16 15:49:02 INFO  LogHandler:12 - Testing on chrome
+2025-05-16 15:49:07 INFO  LogHandler:12 - Launching URL
+2025-05-16 15:49:08 INFO  LogHandler:12 - All the elements are visible in header
+2025-05-17 01:40:18 INFO  LogHandler:12 - Testing on chrome
+2025-05-19 03:37:23 INFO  LogHandler:12 - Testing on chrome
+2025-05-19 03:40:52 INFO  LogHandler:12 - Testing on chrome
+2025-05-19 04:04:28 INFO  LogHandler:12 - Testing on chrome
+2025-05-19 23:49:35 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 10:21:55 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 10:29:51 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 17:44:41 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 17:47:41 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 18:51:35 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 23:42:42 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 23:42:49 INFO  LogHandler:12 - Please fill out this field.
+2025-05-20 23:42:49 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 23:42:52 INFO  LogHandler:12 - Please fill out this field.
+2025-05-20 23:42:54 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 23:43:09 INFO  LogHandler:12 - Testing on chrome
+2025-05-20 23:43:12 INFO  LogHandler:12 - You are logged in
+2025-05-21 00:31:28 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 00:31:33 INFO  LogHandler:12 - Please fill out this field.
+2025-05-21 00:31:33 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 00:31:36 INFO  LogHandler:12 - Please fill out this field.
+2025-05-21 00:31:37 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 00:31:50 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 00:31:54 INFO  LogHandler:12 - You are logged in
+2025-05-21 00:50:47 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 00:51:05 INFO  LogHandler:12 - Please fill out this field.
+2025-05-21 00:51:05 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 00:51:08 INFO  LogHandler:12 - Please fill out this field.
+2025-05-21 00:51:09 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 00:51:12 INFO  LogHandler:12 - Invalid Username and Password
+2025-05-21 00:51:13 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 00:51:16 INFO  LogHandler:12 - You are logged in
+2025-05-21 21:44:33 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 21:44:40 INFO  LogHandler:12 - Please fill out this field.
+2025-05-21 22:42:15 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 22:47:26 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 22:47:34 INFO  LogHandler:12 - You are logged in
+2025-05-21 23:00:29 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 23:02:32 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 23:03:35 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 23:03:49 INFO  LogHandler:12 - Testing on chrome
+2025-05-21 23:25:28 INFO  LogHandler:12 - Testing on chrome
+>>>>>>> 0b7c156f2f3e7ab13c811281b9caf2582bbb368c
+2025-05-22 23:22:45 INFO  LogHandler:12 - Testing on chrome
+2025-05-22 23:22:51 INFO  LogHandler:12 - You are logged in
+2025-05-22 23:23:12 INFO  LogHandler:12 - Testing on chrome
+2025-05-23 00:18:22 INFO  LogHandler:12 - All the elements are visible in header
+2025-05-23 00:30:02 INFO  LogHandler:12 - You are logged in
