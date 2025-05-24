@@ -1,8 +1,36 @@
 package tests;
 
+import java.util.Map;
+
 import org.testng.annotations.DataProvider;
 
-public class DataSupply {
+import utilities.ExcelReader;
+
+public class DataProviders {
+	
+	
+	@DataProvider(name = "ValidLoginData")
+	public Object[][] provideValidLoginData() {
+		String sheetName = "Login";
+		String scenarioType = "valid";
+		Map<String, String> dataMap = ExcelReader.getDataByScenario(sheetName, scenarioType);
+
+		String Username = dataMap.get("Username");
+		String Password = dataMap.get("Password");
+		return new Object[][] { { Username, Password } };
+	}
+	
+	@DataProvider(name = "inValidLoginData")
+	public Object[][] provideinValidLoginData() {
+		String sheetName = "Login";
+		String scenarioType = "invalid";
+		Map<String, String> dataMap = ExcelReader.getDataByScenario(sheetName, scenarioType);
+
+		String Username = dataMap.get("Username");
+		String Password = dataMap.get("Password");
+		return new Object[][] { { Username, Password } };
+	}
+	
 	@DataProvider()
 	public String[] practiceQuestTitle() {
 		String[] data= new String[] {
@@ -41,6 +69,24 @@ public class DataSupply {
 		return data;
 		
 		
+	}
+	
+	@DataProvider(name = "invalidpythonCode")
+	public Object[][] incorrectPythonCode() {
+		Map<String, String> dataMap = ExcelReader.getDataByScenario("Pythoncode", "incorrectCode");
+
+		String code = dataMap.get("Pcode");
+		
+		return new Object[][]  { {code} };
+	}
+	
+	@DataProvider(name = "validpythonCode")
+	public Object[][] validPythonCode() {
+		Map<String, String> dataMap = ExcelReader.getDataByScenario("Pythoncode", "valid");
+
+		String code = dataMap.get("Pcode");
+		String result = dataMap.get("Result");
+		return new Object[][] { { code, result} };
 	}
 	
 	@DataProvider()

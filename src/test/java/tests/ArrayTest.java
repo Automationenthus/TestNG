@@ -13,32 +13,30 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 
+import base.BaseTest;
 import driverFactory.DriverFactory;
-import hooks.Hooks;
 import pageObject.ArrayPF;
+import pageObject.DataStructurePF;
+import pageObject.LoginPF;
 import utilities.ConfigReader;
 import utilities.ExcelReader;
 import utilities.LogHandler;
 
 
-public class ArrayTest extends Hooks {
+public class ArrayTest extends BaseTest {
 	ArrayPF arraysPage;
-    WebDriver driver;
+	LoginPF lp;
+	DataStructurePF dp;
+   
 
     @BeforeMethod
     public void loginAndSetUp() {
-        driver = DriverFactory.getDriver();
         arraysPage = new ArrayPF(driver);
-        driver.get(ConfigReader.getProperty("url"));
-        driver.findElement(By.linkText("Sign in")).click();
-        driver.findElement(By.id("id_username")).sendKeys(ConfigReader.getProperty("username"));
-        driver.findElement(By.id("id_password")).sendKeys(ConfigReader.getProperty("password"));
-        driver.findElement(By.xpath("//input[@value='Login']")).click();
+        lp=new LoginPF(driver);
+       // lp.login();
+        dp=new 	DataStructurePF(driver);
+        dp.loginBackgroundForPages();
 
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.titleContains("NumpyNinja"));
-
-        Assert.assertTrue(driver.getTitle().contains("NumpyNinja"), "Login failed or incorrect page");
     }
     
     @Test(priority=1) 
@@ -49,7 +47,7 @@ public class ArrayTest extends Hooks {
     
    
         
-	 @Test (dataProvider = "ArraysLinks",dataProviderClass =DataSupply.class,priority=2 )
+	 @Test (dataProvider = "ArraysLinks",dataProviderClass =DataProviders.class,priority=2 )
 	 public void verifyArraysNavigation(String linktext) {
 	 
 		 arraysPage.clickGettingStarted();
@@ -119,7 +117,7 @@ public class ArrayTest extends Hooks {
 	 
 	 
 
-	    @Test(dataProvider = "questionLinks",dataProviderClass =DataSupply.class, priority=8)
+	    @Test(dataProvider = "questionLinks",dataProviderClass =DataProviders.class, priority=8)
 	    public void verifyPracticeQuestionNavigation(String questionLinkText) {
 	    	
 	    	arraysPage.navigateToArraysPracticeQuestions();
@@ -135,7 +133,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=9) 
 	    public void ValidcodeandRunSearchArray() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.sa");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.sa");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -148,7 +146,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=10) 
 	    public void inValidcodeandRunSearchArray() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.sa");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.sa");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -162,7 +160,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=11) 
 	    public void ValidcodeandSubmitSearchArray() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.sa");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.sa");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -177,7 +175,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=12) 
 	    public void inValidcodeandSubmitSearchArray() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.sa");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.sa");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -193,7 +191,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=13) 
 	    public void ValidcodeandRunMAX() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.max");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.max");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -206,7 +204,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=14) 
 	    public void inValidcodeandRunMAX() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.max");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.max");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -220,7 +218,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=15) 
 	    public void ValidcodeandSubmitMAX() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.max");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.max");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -235,7 +233,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=16) 
 	    public void inValidcodeandSubmitMAX() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.max");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.max");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -252,7 +250,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=17) 
 	    public void ValidcodeandRunNumber() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.Num");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.Num");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -265,7 +263,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=18) 
 	    public void inValidcodeandRunNumber() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.Num");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.Num");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -279,7 +277,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=19) 
 	    public void ValidcodeandSubmitNumber() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.Num");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.Num");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -294,7 +292,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=20) 
 	    public void inValidcodeandSubmitNumber() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.Num");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.Num");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -311,7 +309,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=21) 
 	    public void ValidcodeandRunSortedSquares() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.SQ");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.SQ");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -324,7 +322,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=22) 
 	    public void inValidcodeandRunSortedSquares() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.SQ");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.SQ");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -338,7 +336,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=23) 
 	    public void ValidcodeandSubmitSortedSquares() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.SQ");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.SQ");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();
@@ -353,7 +351,7 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=24) 
 	    public void inValidcodeandSubmitSortedSquares() {
 	    	arraysPage.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.SQ");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.SQ");
 			String Codetoenter=data.get("Code");
 			arraysPage.enterpythonCode(Codetoenter);
 			arraysPage.clickRun();

@@ -16,9 +16,10 @@ import org.openqa.selenium.safari.SafariDriver;
 public class DriverFactory {
 
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+ 
 
-    public static WebDriver initDriver() {
-        String browser = ConfigReader.getProperty("browser");
+    public static WebDriver initDriver(String browser) {
+    	          
 
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();

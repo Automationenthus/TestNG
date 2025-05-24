@@ -1,4 +1,4 @@
-package hooks;
+package base;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -6,6 +6,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+
 import driverFactory.DriverFactory;
 //import utilities.ConfigReader;
 import utilities.ConfigReader;
@@ -15,13 +18,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class Hooks {
+public class BaseTest {
 	public static WebDriver driver;
 
 	@BeforeMethod
-	public void setUp() {
+	@Parameters("browser")
+	public void setUp(@Optional("chrome")String browser) {
 		
-		driver = DriverFactory.initDriver();
+		 driver= DriverFactory.initDriver(browser);
 		String url = ConfigReader.getProperty("url");
 		if (url == null || url.isEmpty()) {
 			throw new RuntimeException("URL not specified in config.properties");

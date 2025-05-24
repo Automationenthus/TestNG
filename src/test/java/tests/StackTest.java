@@ -13,8 +13,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 
+import base.BaseTest;
 import driverFactory.DriverFactory;
-import hooks.Hooks;
+import pageObject.DataStructurePF;
+import pageObject.LoginPF;
 import pageObject.StackPF;
 import utilities.ConfigReader;
 import utilities.ExcelReader;
@@ -22,24 +24,21 @@ import utilities.LogHandler;
 
 
 
-public class StackTest extends Hooks {
+public class StackTest extends BaseTest {
 	StackPF stackpage;
-    WebDriver driver;
+	LoginPF lp;
+	DataStructurePF dp;
+   
     
     @BeforeMethod
     public void loginAndSetUp() {
-        driver = DriverFactory.getDriver();
+        
         stackpage = new StackPF(driver);
-        driver.get(ConfigReader.getProperty("url"));
-        driver.findElement(By.linkText("Sign in")).click();
-        driver.findElement(By.id("id_username")).sendKeys(ConfigReader.getProperty("username"));
-        driver.findElement(By.id("id_password")).sendKeys(ConfigReader.getProperty("password"));
-        driver.findElement(By.xpath("//input[@value='Login']")).click();
-
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.titleContains("NumpyNinja"));
-
-        Assert.assertTrue(driver.getTitle().contains("NumpyNinja"), "Login failed or incorrect page");
+        lp=new LoginPF(driver);
+       // lp.login();
+        dp=new 	DataStructurePF(driver);
+        dp.loginBackgroundForPages();
+        
     }
     
     @Test(priority=1) 
@@ -49,7 +48,7 @@ public class StackTest extends Hooks {
     }
     
 
-    @Test (dataProvider = "StackLinks",dataProviderClass =DataSupply.class,priority=2)
+    @Test (dataProvider = "StackLinks",dataProviderClass =DataProviders.class,priority=2)
 	 public void verifyStacksNavigation(String linktext) {
 	 
     	 stackpage.clickGettingStarted();
@@ -86,7 +85,7 @@ public class StackTest extends Hooks {
 	 @Test(priority=5)
 		public void validPythonCodeforTryEditor() {
 		stackpage.navigateToStackstryeditorPage();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid");
 			String Codetoenter=data.get("Code");
 		   stackpage.enterpythonCode(Codetoenter);
 			stackpage.clickRunButton();
@@ -99,7 +98,7 @@ public class StackTest extends Hooks {
 	 @Test(priority=6)
 		public void InvalidPythonCodeforTryEditor() {
 		 stackpage.navigateToStackstryeditorPage();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid");
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid");
 			String Codetoenter=data.get("Code");
 			stackpage.enterpythonCode(Codetoenter);
 			stackpage.clickRunButton();

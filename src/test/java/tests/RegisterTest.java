@@ -8,15 +8,13 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-
-
-import hooks.Hooks;
-import pageObject.DataStructureIntroPF;
+import base.BaseTest;
+import pageObject.DataStructurePF;
 import pageObject.RegisterPF;
 import utilities.ExcelReader;
 import utilities.LogHandler;
 
-public class RegisterTest extends Hooks {
+public class RegisterTest extends BaseTest {
 	RegisterPF rp;
 	SoftAssert softAssert;
 	
@@ -59,7 +57,7 @@ public class RegisterTest extends Hooks {
 		
 	}
 	
-	@Test(dataProvider = "registerPageData" , priority = 4,dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "registerPageData" , priority = 4,dataProviderClass = DataProviders.class)
 	public void registerValidationWithInvalidData(String sheetname,String scenariotype, String expected) {
 		Map<String, String> data = ExcelReader.getDataByScenario(sheetname, scenariotype);	
 		String uName=data.get("username");
@@ -74,7 +72,7 @@ public class RegisterTest extends Hooks {
 		
 	}
 	
-	@Test(dataProvider = "registerPageDataValid" , priority = 5,dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "registerPageDataValid" , priority = 5,dataProviderClass = DataProviders.class)
 	public void registerWithValidData(String sheetname,String scenariotype, String expected) {
 		Map<String, String> data = ExcelReader.getDataByScenario(sheetname, scenariotype);	
 		String uName=data.get("username");

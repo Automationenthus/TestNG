@@ -1,4 +1,4 @@
-package utilities;
+package listeners;
 
 
 
@@ -15,7 +15,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import hooks.Hooks;
+import base.BaseTest;
 
 public class ExtentwithListeners implements ITestListener {
 	public ExtentSparkReporter sparkReport; //UI of the report
@@ -55,7 +55,7 @@ public class ExtentwithListeners implements ITestListener {
 	    test.log(Status.FAIL, result.getName() + " test failed");
 	    test.log(Status.INFO, result.getThrowable());
 
-	    String imagePath = new Hooks().captureScreenShot(result.getName());
+	    String imagePath = new BaseTest().captureScreenShot(result.getName());
 
 	    if (imagePath != null) {
 	        test.addScreenCaptureFromPath(imagePath);  
