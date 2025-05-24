@@ -30,10 +30,10 @@ public class StackTest extends Hooks {
     public void loginAndSetUp() {
         driver = DriverFactory.getDriver();
         stackpage = new StackPF(driver);
-        driver.get(ConfigReader.getProperty("url"));
+        driver.get(ConfigReader.getProperties("url"));
         driver.findElement(By.linkText("Sign in")).click();
-        driver.findElement(By.id("id_username")).sendKeys(ConfigReader.getProperty("username"));
-        driver.findElement(By.id("id_password")).sendKeys(ConfigReader.getProperty("password"));
+        driver.findElement(By.id("id_username")).sendKeys(ConfigReader.getProperties("username"));
+        driver.findElement(By.id("id_password")).sendKeys(ConfigReader.getProperties("password"));
         driver.findElement(By.xpath("//input[@value='Login']")).click();
 
         new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -45,6 +45,7 @@ public class StackTest extends Hooks {
     @Test(priority=1) 
     public void verifyUserIsInStackPage() {
     	stackpage.navigateTostackPage();
+    	LogHandler.info("Navigated to Stack page.");
         Assert.assertTrue(driver.getTitle().contains("Stack"), "incorrect page");
     }
     
@@ -62,6 +63,7 @@ public class StackTest extends Hooks {
 	 public void VerifyTryHere() {
 		 
     	stackpage.navigateToStackstryeditorPage();
+    	LogHandler.info("Navigated to Try Editor page.");
 		 Assert.assertTrue(stackpage.isRunButtonVisible(), "Run button not visible");
 	 }
     
@@ -73,7 +75,7 @@ public class StackTest extends Hooks {
         stackpage.clickRunButton();
         String alertText = stackpage.getAlertTextAndAccept();
         if (alertText == null) {
-            System.out.println("WARN: Bug - No alert shown for empty code.");
+        	LogHandler.info("Bug - No alert shown for empty code.");
             Assert.fail("Bug: No alert displayed when clicking Run without entering code.");
         } else {
             Assert.assertTrue(alertText.toLowerCase().contains("error"),
