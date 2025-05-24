@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [ds-algo]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listeners.ExtentwithListeners"/>
+    <listener class-name="listeners.AnnotationTransformerListener"/>
+  </listeners>
+  <test thread-count="2" parallel="classes" name="dsAlgoModulesChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.ArrayTest">
+        <methods>
+          <include name="verifyRunButtonWithoutEnteringCode"/>
+          <include name="validPythonCodeforTryEditor"/>
+          <include name="ValidcodeandSubmitMAX"/>
+          <include name="InvalidPythonCodeforTryEditor"/>
+          <include name="ValidcodeandRunNumber"/>
+          <include name="inValidcodeandSubmitSortedSquares"/>
+          <include name="VerifyPracticeQuestion"/>
+          <include name="ValidcodeandRunSearchArray"/>
+          <include name="verifyArraysNavigation" invocation-numbers="0 3"/>
+          <include name="ValidcodeandSubmitSortedSquares"/>
+          <include name="tearDown"/>
+          <include name="loginAndSetUp"/>
+          <include name="VerifyTryHere"/>
+          <include name="inValidcodeandRunSearchArray"/>
+          <include name="ValidcodeandRunSortedSquares"/>
+          <include name="ValidcodeandRunMAX"/>
+          <include name="inValidcodeandRunMAX"/>
+          <include name="inValidcodeandRunNumber"/>
+          <include name="setUp"/>
+          <include name="verifyPracticeQuestionNavigation"/>
+          <include name="Signout"/>
+          <include name="inValidcodeandSubmitSearchArray"/>
+          <include name="inValidcodeandSubmitMAX"/>
+          <include name="ValidcodeandSubmitNumber"/>
+          <include name="inValidcodeandRunSortedSquares"/>
+          <include name="verifyUserIsInArrayPage"/>
+          <include name="ValidcodeandSubmitSearchArray"/>
+          <include name="inValidcodeandSubmitNumber"/>
+        </methods>
+      </class> <!-- tests.ArrayTest -->
+      <class name="tests.DataStructureIntroTest">
+        <methods>
+          <include name="incorrectPythonCodeValidation"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validPythonCodeValidation"/>
+          <include name="tryhereValidation" invocation-numbers="0"/>
+          <include name="pageSetup"/>
+          <include name="signoutValidation"/>
+          <include name="navigateBack"/>
+          <include name="tryEditorValidationWithoutCode"/>
+        </methods>
+      </class> <!-- tests.DataStructureIntroTest -->
+      <class name="tests.RegisterTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="registerValidationWithInvalidData"/>
+          <include name="registerValidationWithoutUserInfo"/>
+          <include name="registerValidationWithInvalidConfirmPwd"/>
+          <include name="pageSetup"/>
+          <include name="loginButtonValidationOnRegisterPage"/>
+          <include name="registerWithValidData"/>
+        </methods>
+      </class> <!-- tests.RegisterTest -->
+      <class name="tests.HomeTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testClickDropdownOption" invocation-numbers="0 4"/>
+          <include name="pageSetup"/>
+        </methods>
+      </class> <!-- tests.HomeTest -->
+      <class name="tests.LinkedListTest">
+        <methods>
+          <include name="pageSetup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="incorrectPythonCodeValidationQueue"/>
+          <include name="validPythonCodeValidationQueue"/>
+          <include name="tryhereValidationForQueue"/>
+          <include name="dataStructureValidation"/>
+          <include name="signoutValidationLL"/>
+          <include name="testClickEachQueueTopic"/>
+          <include name="tryEditorValidationWithoutCodeQueue"/>
+          <include name="navigateBackForLL"/>
+          <include name="practiceQuestionsLinkValidation"/>
+        </methods>
+      </class> <!-- tests.LinkedListTest -->
+      <class name="tests.QueueTest">
+        <methods>
+          <include name="signoutValidation"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="pageSetup"/>
+          <include name="validPythonCodeValidationQueue"/>
+          <include name="navigateBack"/>
+        </methods>
+      </class> <!-- tests.QueueTest -->
+      <class name="tests.StackTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Signout" invocation-numbers="0"/>
+          <include name="loginAndSetUp"/>
+          <include name="verifyRunButtonWithoutEnteringCode"/>
+        </methods>
+      </class> <!-- tests.StackTest -->
+      <class name="tests.TreeTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="incorrectPythonCodeValidation"/>
+          <include name="validPythonCodeValidation"/>
+          <include name="signoutValidation"/>
+          <include name="treePageLinksValidation"/>
+          <include name="treePageValidation"/>
+          <include name="headrElementsValidation"/>
+          <include name="navigateBack"/>
+          <include name="practiceQuestionValidation"/>
+          <include name="tryHereValidation"/>
+          <include name="pageSetup"/>
+          <include name="tryEditorValidationWithoutCode"/>
+        </methods>
+      </class> <!-- tests.TreeTest -->
+    </classes>
+  </test> <!-- dsAlgoModulesChrome(failed) -->
+</suite> <!-- Failed suite [ds-algo] -->

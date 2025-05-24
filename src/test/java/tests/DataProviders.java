@@ -7,8 +7,8 @@ import org.testng.annotations.DataProvider;
 import utilities.ExcelReader;
 
 public class DataProviders {
-	
-	
+
+
 	@DataProvider(name = "ValidLoginData")
 	public Object[][] provideValidLoginData() {
 		String sheetName = "Login";
@@ -19,7 +19,7 @@ public class DataProviders {
 		String Password = dataMap.get("Password");
 		return new Object[][] { { Username, Password } };
 	}
-	
+
 	@DataProvider(name = "inValidLoginData")
 	public Object[][] provideinValidLoginData() {
 		String sheetName = "Login";
@@ -30,56 +30,56 @@ public class DataProviders {
 		String Password = dataMap.get("Password");
 		return new Object[][] { { Username, Password } };
 	}
-	
+
 	@DataProvider()
 	public String[] practiceQuestTitle() {
 		String[] data= new String[] {
 				"Practice Questions"
-						
+
 		};
 		return data;
 	}
-	
+
 	@DataProvider()
 	public String[] dataStructureTitle() {
 		String[] data= new String[] {
 				"Data Structures-Introduction"
-			};
+		};
 		return data;
 	}
-	
+
 	@DataProvider()
 	public String[] tryEditorTitle() {
 		String[] data= new String[] {
 				"Assessment"
-			};
+		};
 		return data;
 	}
-	
+
 	@DataProvider()
 	public String[][] registerPageData(){
-		
+
 		String[][] data =new String[][] {
-			
+
 			{"Register","pwdBlank","Please fill out this field."},
-		    {"Register","usernameBlank","Please fill out this field."},
+			{"Register","usernameBlank","Please fill out this field."},
 			{"Register","confirmPwdBlank","Please fill out this field."}
-			};
-				
+		};
+
 		return data;
-		
-		
+
+
 	}
-	
+
 	@DataProvider(name = "invalidpythonCode")
 	public Object[][] incorrectPythonCode() {
 		Map<String, String> dataMap = ExcelReader.getDataByScenario("Pythoncode", "incorrectCode");
 
 		String code = dataMap.get("Pcode");
-		
+
 		return new Object[][]  { {code} };
 	}
-	
+
 	@DataProvider(name = "validpythonCode")
 	public Object[][] validPythonCode() {
 		Map<String, String> dataMap = ExcelReader.getDataByScenario("Pythoncode", "valid");
@@ -88,21 +88,21 @@ public class DataProviders {
 		String result = dataMap.get("Result");
 		return new Object[][] { { code, result} };
 	}
-	
+
 	@DataProvider()
 	public Object[][] registerPageDataValid(){
-		
+
 		String[][] data =new String[][] {
-			
+
 			{"Register","valid","New Account Created. You are logged in as"}
-		
-			};
-				
+
+		};
+
 		return data;
-		
-		
+
+
 	}
-	
+
 	@DataProvider()
 	public Object[][] treePageLinks(){
 
@@ -128,7 +128,7 @@ public class DataProviders {
 
 
 	}
-	
+
 	@DataProvider()
 	public Object[][] treeLinks(){
 
@@ -154,82 +154,125 @@ public class DataProviders {
 
 
 	}
-	
 
-	 @DataProvider(name = "ArraysLinks")
-	    public Object[][] arrayLinksData() {
-	        return new Object[][] {
-	            {"Arrays in Python"},
-	            {"Arrays Using List"},
-	            {"Basic Operations in Lists"},
-	            {"Applications of Array"}
-	        };
-	    }
-	 
-	 @DataProvider(name = "questionLinks")
-	    public Object[][] questionLinksData() {
-	        return new Object[][] {
-	            {"Search the array"},
-	            {"Max Consecutive Ones"},
-	            {"Find Numbers with Even Number of Digits"},
-	            {"Squares of a Sorted Array"}
-	        };
-	    }
-	 
-	 @DataProvider(name = "StackLinks")
-	    public Object[][] StackLinksData() {
-	        return new Object[][] {
-	            {"Operations in Stack"},
-	            {"Implementation"},
-	            {"Applications"},
-	        };
-	    }
-	 
-	 @DataProvider()
-		public String[] graphPageTitle() {
-			String[] data= new String[] {
-					"Graph"
-				};
-			return data;
-		}
-		
-		@DataProvider()
-		public String[] queuePageTitle() {
-			String[] data= new String[] {
-					"Queue"
-				};
-			return data;
-		}
-		
-		@DataProvider(name = "queueTopics")
-		public Object[][] getQueueTopics() {
-		    return new Object[][] {
-		        {"Implementation of Queue in Python"},
-		        {"Implementation using collections.deque"},
-		        {"Implementation using array"},
-		        {"Queue Operations"}
-		    };
-		}
-		
-		@DataProvider()
-		public String[] linkedListPageTitle() {
-			String[] data= new String[] {
-					"Linked List"
-				};
-			return data;
-		}
-		
-		@DataProvider(name = "linkedListTopics")
-	    public Object[][] getLinkedListTopics() {
-	        return new Object[][] {
-	            {"introduction"},
-	            {"creating linked list"},
-	            {"types of linked list"},
-	            {"implement linked list in python"},
-	            {"traversal"},
-	            {"insertion"},
-	            {"deletion"}
-	        };
-	    }
+
+	@DataProvider(name = "ArraysLinks")
+	public Object[][] arrayLinksData() {
+		return new Object[][] {
+			{"Arrays in Python"},
+			{"Arrays Using List"},
+			{"Basic Operations in Lists"},
+			{"Applications of Array"}
+		};
+	}
+
+	@DataProvider(name = "questionLinks")
+	public Object[][] questionLinksData() {
+		return new Object[][] {
+			{"Search the array"},
+			{"Max Consecutive Ones"},
+			{"Find Numbers with Even Number of Digits"},
+			{"Squares of a Sorted Array"}
+		};
+	}
+
+	@DataProvider(name = "StackLinks")
+	public Object[][] StackLinksData() {
+		return new Object[][] {
+			{"Operations in Stack"},
+			{"Implementation"},
+			{"Applications"},
+		};
+	}
+
+	@DataProvider()
+	public String[] graphPageTitle() {
+		String[] data= new String[] {
+				"Graph"
+		};
+		return data;
+	}
+
+	@DataProvider()
+	public String[] queuePageTitle() {
+		String[] data= new String[] {
+				"Queue"
+		};
+		return data;
+	}
+
+	@DataProvider(name = "queueTopics")
+	public Object[][] getQueueTopics() {
+		return new Object[][] {
+			{"Implementation of Queue in Python"},
+			{"Implementation using collections.deque"},
+			{"Implementation using array"},
+			{"Queue Operations"}
+		};
+	}
+
+	@DataProvider()
+	public String[] linkedListPageTitle() {
+		String[] data= new String[] {
+				"Linked List"
+		};
+		return data;
+	}
+
+	@DataProvider(name = "linkedListTopics")
+	public Object[][] getLinkedListTopics() {
+		return new Object[][] {
+			{"introduction"},
+			{"creating linked list"},
+			{"types of linked list"},
+			{"implement linked list in python"},
+			{"traversal"},
+			{"insertion"},
+			{"deletion"}
+		};
+	}
+
+	@DataProvider(name = "getStartedModules")
+	public Object[][] getStartedModules() {
+		return new Object[][] {
+			{"Data Structures"},
+			{"Arrays"},
+			{"Linked List"},
+			{"Stack"},
+			{"Queue"},
+			{"Tree"},
+			{"Graph"}
+		};
+
+
+	}
+
+	@DataProvider(name = "dropdownOptions")
+	public Object[][] getDropdownOptions() {
+		return new Object[][] {
+			{"Arrays"},
+			{"Linked List"},
+			{"Stack"},
+			{"Queue"},
+			{"Tree"},
+			{"Graph"}
+		};
+	}
+
+	@DataProvider(name = "registorTitle")
+	public String[] getRegistorTitle() {
+		String[] data= new String[] {
+				"Registration"
+		};
+		return data;
+	}
+
+	@DataProvider(name = "loginTitle")
+	public String[] getLoginPageTitle() {
+		String[] data= new String[] {
+				"Login"
+		};
+		return data;
+	}
 
 }
