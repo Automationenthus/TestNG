@@ -148,7 +148,8 @@ public class DataStructurePF {
 			    }
 	}		
 	
-			
+
+
 	public void clearEditor() {
 		codeEditor.clear();
 	}

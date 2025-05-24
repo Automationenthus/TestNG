@@ -10,8 +10,8 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import driverFactory.DriverFactory;
-//import utilities.ConfigReader;
 import utilities.ConfigReader;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

@@ -184,4 +184,52 @@ public class DataProviders {
 	            {"Applications"},
 	        };
 	    }
+	 
+	 @DataProvider()
+		public String[] graphPageTitle() {
+			String[] data= new String[] {
+					"Graph"
+				};
+			return data;
+		}
+		
+		@DataProvider()
+		public String[] queuePageTitle() {
+			String[] data= new String[] {
+					"Queue"
+				};
+			return data;
+		}
+		
+		@DataProvider(name = "queueTopics")
+		public Object[][] getQueueTopics() {
+		    return new Object[][] {
+		        {"Implementation of Queue in Python"},
+		        {"Implementation using collections.deque"},
+		        {"Implementation using array"},
+		        {"Queue Operations"}
+		    };
+		}
+		
+		@DataProvider()
+		public String[] linkedListPageTitle() {
+			String[] data= new String[] {
+					"Linked List"
+				};
+			return data;
+		}
+		
+		@DataProvider(name = "linkedListTopics")
+	    public Object[][] getLinkedListTopics() {
+	        return new Object[][] {
+	            {"introduction"},
+	            {"creating linked list"},
+	            {"types of linked list"},
+	            {"implement linked list in python"},
+	            {"traversal"},
+	            {"insertion"},
+	            {"deletion"}
+	        };
+	    }
+
 }
