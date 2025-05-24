@@ -1,306 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
-=======
-
-<testng-results ignored="0" total="51" passed="50" failed="1" skipped="0">
->>>>>>> main
+<testng-results ignored="24" total="25" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-20T18:19:56 PDT" name="ds-algo" finished-at="2025-05-20T18:21:54 PDT" duration-ms="118552">
+  <suite started-at="2025-05-24T13:36:33 PDT" name="Default suite" finished-at="2025-05-24T13:36:50 PDT" duration-ms="17231">
     <groups>
     </groups>
-    <test started-at="2025-05-20T18:19:56 PDT" name="dsAlgoModules" finished-at="2025-05-20T18:21:54 PDT" duration-ms="118552">
-      <class name="tests.RegisterTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:19:56 PDT" name="setUp" finished-at="2025-05-20T18:20:02 PDT" duration-ms="6161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:02 PDT" name="pageSetup" finished-at="2025-05-20T18:20:03 PDT" duration-ms="446" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="registerPageValidation()[pri:1, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:03 PDT" name="registerPageValidation" finished-at="2025-05-20T18:20:03 PDT" duration-ms="176" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPageValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:03 PDT" name="tearDown" finished-at="2025-05-20T18:20:03 PDT" duration-ms="385" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:03 PDT" name="setUp" finished-at="2025-05-20T18:20:06 PDT" duration-ms="3201" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:06 PDT" name="pageSetup" finished-at="2025-05-20T18:20:07 PDT" duration-ms="360" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithoutUserInfo(java.lang.String)[pri:2, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:07 PDT" name="registerValidationWithoutUserInfo" finished-at="2025-05-20T18:20:08 PDT" duration-ms="1077" status="PASS">
+    <test started-at="2025-05-24T13:36:33 PDT" name="Default test" finished-at="2025-05-24T13:36:50 PDT" duration-ms="17231">
+      <class name="tests.ArrayTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.ArrayTest@4d1c00d0]" started-at="2025-05-24T13:36:33 PDT" name="setUp" finished-at="2025-05-24T13:36:36 PDT" duration-ms="2868" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Please fill out this field.]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerValidationWithoutUserInfo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:08 PDT" name="tearDown" finished-at="2025-05-20T18:20:08 PDT" duration-ms="310" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:08 PDT" name="setUp" finished-at="2025-05-20T18:20:11 PDT" duration-ms="2923" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:11 PDT" name="pageSetup" finished-at="2025-05-20T18:20:11 PDT" duration-ms="376" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithInvalidConfirmPwd(java.lang.String)[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:11 PDT" name="registerValidationWithInvalidConfirmPwd" finished-at="2025-05-20T18:20:38 PDT" depends-on-methods="tests.RegisterTest.registerValidationWithoutUserInfo" duration-ms="27029" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[password_mismatch:The two password fields didn’t match.]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerValidationWithInvalidConfirmPwd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:38 PDT" name="tearDown" finished-at="2025-05-20T18:20:39 PDT" duration-ms="347" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:39 PDT" name="setUp" finished-at="2025-05-20T18:20:43 PDT" duration-ms="3984" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:43 PDT" name="pageSetup" finished-at="2025-05-20T18:20:43 PDT" duration-ms="365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithInvalidData(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:43 PDT" name="registerValidationWithInvalidData" data-provider="registerPageData" finished-at="2025-05-20T18:20:57 PDT" duration-ms="14121" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Register]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[pwdBlank]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Please fill out this field.]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerValidationWithInvalidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:57 PDT" name="tearDown" finished-at="2025-05-20T18:20:58 PDT" duration-ms="413" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:20:58 PDT" name="setUp" finished-at="2025-05-20T18:21:01 PDT" duration-ms="3553" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:01 PDT" name="pageSetup" finished-at="2025-05-20T18:21:02 PDT" duration-ms="344" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithInvalidData(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:02 PDT" name="registerValidationWithInvalidData" data-provider="registerPageData" finished-at="2025-05-20T18:21:15 PDT" duration-ms="13513" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Register]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[usernameBlank]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Please fill out this field.]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerValidationWithInvalidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:15 PDT" name="tearDown" finished-at="2025-05-20T18:21:16 PDT" duration-ms="390" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:16 PDT" name="setUp" finished-at="2025-05-20T18:21:19 PDT" duration-ms="3100" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:19 PDT" name="pageSetup" finished-at="2025-05-20T18:21:19 PDT" duration-ms="366" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="registerValidationWithInvalidData(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:19 PDT" name="registerValidationWithInvalidData" data-provider="registerPageData" finished-at="2025-05-20T18:21:32 PDT" duration-ms="13175" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Register]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[confirmPwdBlank]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Please fill out this field.]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerValidationWithInvalidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:32 PDT" name="tearDown" finished-at="2025-05-20T18:21:33 PDT" duration-ms="391" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:33 PDT" name="setUp" finished-at="2025-05-20T18:21:35 PDT" duration-ms="2384" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:35 PDT" name="pageSetup" finished-at="2025-05-20T18:21:36 PDT" duration-ms="698" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="registerWithValidData(java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:36 PDT" name="registerWithValidData" data-provider="registerPageDataValid" finished-at="2025-05-20T18:21:50 PDT" duration-ms="14212" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Register]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[valid]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[New Account Created. You are logged in as]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [NumpyNinja] but found [Registration],
-expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [NumpyNinja] but found [Registration],
-expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.RegisterTest.registerWithValidData(RegisterTest.java:90)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerWithValidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:50 PDT" name="tearDown" finished-at="2025-05-20T18:21:50 PDT" duration-ms="346" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:50 PDT" name="setUp" finished-at="2025-05-20T18:21:53 PDT" duration-ms="2771" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:53 PDT" name="pageSetup" finished-at="2025-05-20T18:21:54 PDT" duration-ms="336" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="loginButtonValidationOnRegisterPage(java.lang.String)[pri:6, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:54 PDT" name="loginButtonValidationOnRegisterPage" finished-at="2025-05-20T18:21:54 PDT" duration-ms="314" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Login]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginButtonValidationOnRegisterPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@2df3b89c]" started-at="2025-05-20T18:21:54 PDT" name="tearDown" finished-at="2025-05-20T18:21:54 PDT" duration-ms="285" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.RegisterTest -->
-    </test> <!-- dsAlgoModules -->
-  </suite> <!-- ds-algo -->
-
-<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2025-05-20T20:05:08 CDT" name="Default suite" finished-at="2025-05-20T20:05:14 CDT" duration-ms="5285">
-    <groups>
-    </groups>
-    <test started-at="2025-05-20T20:05:08 CDT" name="Default test" finished-at="2025-05-20T20:05:14 CDT" duration-ms="5285">
-      <class name="tests.StackTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.StackTest@37271612]" started-at="2025-05-20T20:05:08 CDT" name="setUp" finished-at="2025-05-20T20:05:12 CDT" duration-ms="3554" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loginAndSetUp()[pri:0, instance:tests.StackTest@37271612]" started-at="2025-05-20T20:05:12 CDT" name="loginAndSetUp" finished-at="2025-05-20T20:05:13 CDT" duration-ms="1048" status="PASS">
+        <test-method is-config="true" signature="loginAndSetUp()[pri:0, instance:tests.ArrayTest@4d1c00d0]" started-at="2025-05-24T13:36:36 PDT" name="loginAndSetUp" finished-at="2025-05-24T13:36:49 PDT" duration-ms="13797" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndSetUp -->
-        <test-method signature="verifyUserIsInStackPage()[pri:1, instance:tests.StackTest@37271612]" started-at="2025-05-20T20:05:13 CDT" name="verifyUserIsInStackPage" finished-at="2025-05-20T20:05:13 CDT" duration-ms="423" status="PASS">
+        <test-method signature="verifyUserIsInArrayPage()[pri:1, instance:tests.ArrayTest@4d1c00d0]" started-at="2025-05-24T13:36:49 PDT" name="verifyUserIsInArrayPage" finished-at="2025-05-24T13:36:50 PDT" duration-ms="394" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsInStackPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.StackTest@37271612]" started-at="2025-05-20T20:05:13 CDT" name="tearDown" finished-at="2025-05-20T20:05:14 CDT" duration-ms="218" status="PASS">
+        </test-method> <!-- verifyUserIsInArrayPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ArrayTest@4d1c00d0]" started-at="2025-05-24T13:36:50 PDT" name="tearDown" finished-at="2025-05-24T13:36:50 PDT" duration-ms="137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.StackTest -->
+      </class> <!-- tests.ArrayTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
-
 </testng-results>

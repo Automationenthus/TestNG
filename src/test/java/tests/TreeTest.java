@@ -1,7 +1,5 @@
 package tests;
 
-import java.util.Map;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -12,7 +10,6 @@ import base.BaseTest;
 import pageObject.DataStructurePF;
 import pageObject.LoginPF;
 import pageObject.TreePF;
-import utilities.ExcelReader;
 import utilities.LogHandler;
 
 public class TreeTest extends BaseTest{
@@ -20,32 +17,30 @@ public class TreeTest extends BaseTest{
 	DataStructurePF dp;
 	LoginPF lp;
 	SoftAssert softAssert;
-	
+
 	@BeforeMethod
-    public void pageSetup() {
-		tp = new TreePF(driver); 
+	public void pageSetup() {
+		tp = new TreePF(driver);
+		tp.clickMainGetStartedButton();
 		lp=new LoginPF(driver);
-		//lp.login();
-        dp=new 	DataStructurePF(driver);
-        dp.loginBackgroundForPages();
-        softAssert = new SoftAssert(); 
-        
-    }
-	
+		lp.login();
+		dp=new 	DataStructurePF(driver);
+		softAssert = new SoftAssert(); 
+	}
+
 	@Test(priority=1)
 	public void treePageValidation(@Optional("Tree") String expectd) {
 		tp.clickOnGetStartBtn();
 		Assert.assertEquals(tp.getPageTitle(),expectd);
 		LogHandler.info("user is on: " +tp.getPageTitle());
 	}
-	
+
 	@Test(dependsOnMethods = {"treePageValidation"})
-	
 	public void headrElementsValidation() {
 		Assert.assertTrue(dp.headerElementsValidation());
-			
+
 	}
-	
+
 	@Test(priority=2,dataProvider="treePageLinks",dataProviderClass = DataProviders.class)
 	public void treePageLinksValidation(String topic,String expectedTitle) {
 		tp.clickOnGetStartBtn();
@@ -53,7 +48,7 @@ public class TreeTest extends BaseTest{
 		String actualTitle=tp.getPageTitle();
 		softAssert.assertEquals(actualTitle, expectedTitle);
 		softAssert.assertAll();
-		
+
 	}
 
 	@Test(priority=3,dataProvider="treeLinks",dataProviderClass = DataProviders.class)
@@ -65,9 +60,9 @@ public class TreeTest extends BaseTest{
 		String actualTitle=tp.getPageTitle();
 		softAssert.assertEquals(actualTitle, tryHeretitle);
 		softAssert.assertAll();
-		
+
 	}
-	
+
 	@Test(priority=4)
 	public void practiceQuestionValidation(@Optional("Practice Questions") String expectedTitle) {
 		tp.clickOnGetStartBtn();
@@ -75,9 +70,9 @@ public class TreeTest extends BaseTest{
 		tp.clickOnPracticeQuestions();
 		String actualTitle=tp.getPageTitle();
 		Assert.assertEquals(actualTitle, expectedTitle);
-		
+
 	}
-	
+
 	@Test(priority = 5)
 	public void tryEditorValidationWithoutCode() {
 		tp.clickOnGetStartBtn();
@@ -89,7 +84,7 @@ public class TreeTest extends BaseTest{
 		softAssert.assertFalse(alertPresent, "Alert is not present after clicking Run");
 		LogHandler.info("alert not found");
 		softAssert.assertAll();
-		
+
 	}
 	@Test(priority=6,dataProvider = "invalidpythonCode",dataProviderClass = DataProviders.class)
 	public void incorrectPythonCodeValidation(String codeToEnter) {
@@ -101,10 +96,10 @@ public class TreeTest extends BaseTest{
 		Assert.assertTrue(dp.isAlertIsPresent());
 		String text=dp.getAlertText();
 		LogHandler.info("alert text is: " +text);
-		 
 
-		
-		
+
+
+
 	}
 	@Test(priority=7,dataProvider = "validpythonCode",dataProviderClass = DataProviders.class)
 	public void validPythonCodeValidation(String codeToEnter,String result) {
@@ -117,7 +112,7 @@ public class TreeTest extends BaseTest{
 		String expectedResult=result;
 		Assert.assertEquals(actualResult, expectedResult);
 		LogHandler.info("answer is: " +actualResult);
-		
+
 	}
 	@Test(priority=8)
 	public void navigateBack(@Optional("Overview of Trees") String expectd) {
@@ -128,10 +123,10 @@ public class TreeTest extends BaseTest{
 		String actualTitle=driver.getTitle();
 		Assert.assertEquals(actualTitle, expectd);
 		LogHandler.info("user successfully navigated back to: "+expectd);
-		
-				
+
+
 	}
-	
+
 	@Test(priority=9)
 	public void signoutValidation(@Optional("NumpyNinja") String expectd) {
 		tp.clickOnGetStartBtn();
@@ -140,11 +135,11 @@ public class TreeTest extends BaseTest{
 		String actualTitle=driver.getTitle();
 		Assert.assertEquals(actualTitle, expectd);
 		LogHandler.info("user successfully navigated back to: "+expectd);
-		
+
 	}
-	
+
 }
-	
-	
+
+
 
 
