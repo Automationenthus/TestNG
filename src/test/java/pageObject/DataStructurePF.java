@@ -19,54 +19,54 @@ import org.testng.Assert;
 
 import utilities.ConfigReader;
 
-public class DataStructureIntroPF {
+public class DataStructurePF {
 	WebDriver driver;
 	WebDriverWait wait;
 
-	public DataStructureIntroPF(WebDriver driver) {
+	public DataStructurePF(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
 	@FindBy(xpath = "//h5[text()='Data Structures-Introduction']/../a[text()='Get Started']")
-	WebElement getStartedBtn; //getstaredbutton
+	private WebElement getStartedBtn; //getstaredbutton
 	
 	@FindBy(xpath = "//div[contains(@class,'alert-primary')]")
-    WebElement sucessMessage;
+	private WebElement sucessMessage;
 	
 	@FindBy(linkText = "NumpyNinja")
-	WebElement numpylink;
+	private WebElement numpylink;
 
 	@FindBy(linkText = "Sign out")
-	WebElement signOutLink;
+	private WebElement signOutLink;
 
 	@FindBy(xpath = "//div[@role='alert']")
-	WebElement logOutMsg;
+	private WebElement logOutMsg;
 
 	@FindBy(xpath = "//div[@id='navbarCollapse']/div[2]/ul/a[2]")
-	WebElement usernamelink;	
+	private WebElement usernamelink;	
 	
 	@FindBy(xpath = "//div[@class='navbar-nav']/div/a[text()='Data Structures']")
-	WebElement dropDown;
+	private WebElement dropDown;
 	
 	@FindBy(linkText = "Time Complexity")
-	WebElement timeComplexityLink;
+	private WebElement timeComplexityLink;
 	
 	@FindBy(linkText = "Practice Questions")
-	WebElement practiceQuestLink;
+	private WebElement practiceQuestLink;
 	
 	@FindBy(linkText = "Try here>>>")
-	WebElement tryHereLink;
+	private WebElement tryHereLink;
 	
 	@FindBy(xpath = "//form[@id='answer_form']/button")
-	WebElement runBtn;
+	private WebElement runBtn;
 	
 	@FindBy(xpath = "//div[@class='input']/div")
-	WebElement codeEditor;
+	private WebElement codeEditor;
 	
 	@FindBy(id = "output")
-	WebElement outputText;
+	private WebElement outputText;
 	@FindBy(linkText = "Sign in")WebElement signIn;
 	@FindBy(id = "id_username")WebElement Login_Username;
 	@FindBy(id = "id_password")WebElement Login_Password;
@@ -148,18 +148,8 @@ public class DataStructureIntroPF {
 			    }
 	}		
 	
-	public void loginBackgroundForPages() {
-		signIn.click();
-//		String uname=ConfigReader.getProperty("username");
-//		String pwd=ConfigReader.getProperty("password");
-//		Login_Username.sendKeys(uname);
-//		Login_Password.sendKeys(pwd);
-		Login_Button.click();
-	
-		
-	}
-	
-		
+
+
 	public void clearEditor() {
 		codeEditor.clear();
 	}
@@ -209,6 +199,17 @@ public class DataStructureIntroPF {
 			
 		}
 		return false;
+	}
+	
+	public void loginBackgroundForPages() {
+		signIn.click();
+		String uname=ConfigReader.getProperty("username");
+		String pwd=ConfigReader.getProperty("password");
+		Login_Username.sendKeys(uname);
+		Login_Password.sendKeys(pwd);
+		Login_Button.click();
+	
+		
 	}
 	
 

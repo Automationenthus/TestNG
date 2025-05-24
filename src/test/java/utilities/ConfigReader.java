@@ -18,7 +18,7 @@ public class ConfigReader {
 	        return prop;
 	    }
 
-	    public static String getProperties(String key) {
+	    public static String getProperty(String key) {
 	        if (prop == null) {
 	            initProperties();
 	        }

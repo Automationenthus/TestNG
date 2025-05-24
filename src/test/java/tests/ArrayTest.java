@@ -11,72 +11,54 @@ import org.testng.annotations.Factory;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
-import hooks.Hooks;
+
+import base.BaseTest;
+import driverFactory.DriverFactory;
+import pageObject.ArrayPF;
+import pageObject.DataStructurePF;
+import pageObject.LoginPF;
+
 import driverFactory.DriverFactory;
 import pageObject.ArrayPF;
 import pageObject.HomePF;
 import pageObject.LoginPF;
 import pageObject.HomePF;
-import utilities.ConfigReader;
-import utilities.DataProvider_Class;
+
 import utilities.ExcelReader;
 import utilities.LogHandler;
 
-public class ArrayTest extends Hooks {
 
-	private String username;
-	private String password;
-	String ExpectedOutput;
-	String pagetitle;
-	ArrayPF arpf;
-	HomePF hmpf;
-	LoginPF lpf;
 
-	@BeforeMethod
-	public void initPageObjects() {
-		hmpf = new HomePF();
-		lpf = new LoginPF(driver);
-		hmpf.launchurl();
-		arpf = new ArrayPF(driver);
-		hmpf.getstartedbuttonclick();
-
-		lpf.click_homesignin();
-		
-		lpf.login_user(username);
-		lpf.login_passowrd(password);
-		lpf.login_button();
-
-	}
-	
-
-	public ArrayTest(String username, String password) throws IOException {
-		this.username = username;
-		this.password = password;
-
-	}
-
-	@Factory(dataProvider = "ValidLoginData", dataProviderClass = DataProvider_Class.class)
-
-	public static Object[] loginData(String username, String password) throws IOException {
-		return new Object[] { new ArrayTest(username, password) };
-
-	}
-
-	@Test(priority = 1)
-	public void verifyUserIsInArrayPage() {
-		arpf.navigateToArraysPage();
-		Assert.assertTrue(driver.getTitle().contains("Array"), "incorrect page");
-	}
-	 
-    
+public class ArrayTest extends BaseTest {
+	ArrayPF arraysPage;
+	LoginPF lp;
+	DataStructurePF dp;
    
+
+    @BeforeMethod
+    public void loginAndSetUp() {
+        arraysPage = new ArrayPF(driver);
+        lp=new LoginPF(driver);
+       // lp.login();
+        dp=new 	DataStructurePF(driver);
+        dp.loginBackgroundForPages();
+
+    }
+    
+    @Test(priority=1) 
+    public void verifyUserIsInArrayPage() {
+    	arraysPage.navigateToArraysPage();
+        Assert.assertTrue(driver.getTitle().contains("Array"), "incorrect page");
+    }
+
+
         
-	 @Test (dataProvider = "ArraysLinks",dataProviderClass =DataSupply.class,priority=2 )
+	 @Test (dataProvider = "ArraysLinks",dataProviderClass =DataProviders.class,priority=2 )
 	 public void verifyArraysNavigation(String linktext) {
 	 
-		 arpf.clickGettingStarted();
+		 arraysPage.clickGettingStarted();
 		 Assert.assertTrue(driver.getTitle().contains("Array"), "Navigation to Arrays failed");
-		 arpf.clickArraysLink(linktext);
+		 arraysPage.clickArraysLink(linktext);
 		 Assert.assertTrue(driver.getTitle().contains(linktext), "Navigation to " + linktext + " failed");
 	 }
 	 
@@ -84,18 +66,18 @@ public class ArrayTest extends Hooks {
 	 @Test(priority=3) 
 	 public void VerifyTryHere() {
 		 
-		 arpf.navigateToTryEditorPage();
+		 arraysPage.navigateToTryEditorPage();
 		 LogHandler.info("Navigated to Try Editor page.");
-		 Assert.assertTrue(arpf.isRunButtonVisible(), "Run button not visible");
+		 Assert.assertTrue(arraysPage.isRunButtonVisible(), "Run button not visible");
 	 }
 	 
 	 @Test(priority=4) 
 	    public void verifyRunButtonWithoutEnteringCode() {
 	        
-		 arpf.navigateToTryEditorPage();
-	        Assert.assertTrue(arpf.isRunButtonVisible(), "Run button not visible");
-	        arpf.clickRunButton();
-	        String alertText = arpf.getAlertTextAndAccept();
+		 arraysPage.navigateToTryEditorPage();
+	        Assert.assertTrue(arraysPage.isRunButtonVisible(), "Run button not visible");
+	        arraysPage.clickRunButton();
+	        String alertText = arraysPage.getAlertTextAndAccept();
 	        if (alertText == null) {
 	        	LogHandler.info("Bug - No alert shown for empty code.");
 	            Assert.fail("Bug: No alert displayed when clicking Run without entering code.");
@@ -109,12 +91,12 @@ public class ArrayTest extends Hooks {
 	
 	 @Test(priority=5)
 		public void validPythonCodeforTryEditor() {
-		 arpf.navigateToTryEditorPage();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid");
+		 arraysPage.navigateToTryEditorPage();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid");
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getEditorOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getEditorOutput();
 	         Assert.assertNotNull(output, "Output is null");
 	         Assert.assertFalse(output.trim().isEmpty(), "Output is empty");
 	         LogHandler.info("answer is: " +output);
@@ -122,12 +104,12 @@ public class ArrayTest extends Hooks {
 
 	 @Test(priority=6)
 		public void InvalidPythonCodeforTryEditor() {
-		 arpf.navigateToTryEditorPage();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid");
+		 arraysPage.navigateToTryEditorPage();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid");
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String alertText = arpf.getAlertTextAndAccept(); // Or AlertUtils.getAlertTextAndAccept()
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String alertText = arraysPage.getAlertTextAndAccept(); // Or AlertUtils.getAlertTextAndAccept()
 		    Assert.assertNotNull(alertText, "Expected alert was not present.");
 		    Assert.assertTrue(alertText.toLowerCase().contains("nameerror"),
 		            "Expected alert to contain 'NameError', but got: " + alertText);
@@ -136,33 +118,35 @@ public class ArrayTest extends Hooks {
 	 @Test(priority=7) 
 	 public void VerifyPracticeQuestion() {
 		 
-		 arpf.navigateToArraysPracticeQuestions();
+		 arraysPage.navigateToArraysPracticeQuestions();
 		 LogHandler.info("Navigated to Practice Question page.");
-		 Assert.assertTrue(arpf.isSearchTheArrayLinkVisible(), "Search the Array link is not visible on Practice page");
+		 Assert.assertTrue(arraysPage.isSearchTheArrayLinkVisible(), "Search the Array link is not visible on Practice page");
 	 }
 	 
 	 
 
-	    @Test(dataProvider = "questionLinks",dataProviderClass =DataSupply.class, priority=8)
+	    @Test(dataProvider = "questionLinks",dataProviderClass =DataProviders.class, priority=8)
 	    public void verifyPracticeQuestionNavigation(String questionLinkText) {
 	    	
-	    	arpf.navigateToArraysPracticeQuestions();
-	    	arpf.clickPracticeQuestion(questionLinkText);
+	    	arraysPage.navigateToArraysPracticeQuestions();
+	    	arraysPage.clickPracticeQuestion(questionLinkText);
 
-	        Assert.assertTrue(arpf.isQuestionDisplayed(), "Question not displayed for: " + questionLinkText);
-	        Assert.assertTrue(arpf.isRunButton1Visible(), "Run button not visible for: " + questionLinkText);
-	        Assert.assertTrue(arpf.isSubmitButtonVisible(), "Submit button not visible for: " + questionLinkText);
+	        Assert.assertTrue(arraysPage.isQuestionDisplayed(), "Question not displayed for: " + questionLinkText);
+	        Assert.assertTrue(arraysPage.isRunButton1Visible(), "Run button not visible for: " + questionLinkText);
+	        Assert.assertTrue(arraysPage.isSubmitButtonVisible(), "Submit button not visible for: " + questionLinkText);
 	        driver.navigate().back();
 	    }
 	    
 	    @Test(priority=9) 
 	    public void ValidcodeandRunSearchArray() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.sa");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.sa");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getConsoleOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getConsoleOutput();
 			LogHandler.info("Editor Output: " + output);
 		     Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Expected output in console, but found none");
@@ -170,12 +154,14 @@ public class ArrayTest extends Hooks {
 	   
 	    @Test(priority=10) 
 	    public void inValidcodeandRunSearchArray() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.sa");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.sa");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String alertText = arpf.getAlertTextAndAccept(); 
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String alertText = arraysPage.getAlertTextAndAccept(); 
 			LogHandler.info("Alert Text: " + alertText);
 		    Assert.assertNotNull(alertText, "Expected alert was not present.");
 		    Assert.assertTrue(alertText.toLowerCase().contains("error"),
@@ -184,12 +170,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=11) 
 	    public void ValidcodeandSubmitSearchArray() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.sa");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.sa");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getEditorOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getEditorOutput();
 			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
@@ -199,12 +187,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=12) 
 	    public void inValidcodeandSubmitSearchArray() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.sa");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.sa");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getEditorOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getEditorOutput();
 			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
@@ -215,12 +205,14 @@ public class ArrayTest extends Hooks {
 	
 	    @Test(priority=13) 
 	    public void ValidcodeandRunMAX() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.max");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.max");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getConsoleOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getConsoleOutput();
 			LogHandler.info("Editor Output: " + output);
 		     Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Expected output in console, but found none");
@@ -228,12 +220,14 @@ public class ArrayTest extends Hooks {
 	   
 	    @Test(priority=14) 
 	    public void inValidcodeandRunMAX() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.max");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.max");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String alertText = arpf.getAlertTextAndAccept(); 
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String alertText = arraysPage.getAlertTextAndAccept(); 
 			LogHandler.info("Alert Text: " + alertText);
 		    Assert.assertNotNull(alertText, "Expected alert was not present.");
 		    Assert.assertTrue(alertText.toLowerCase().contains("error"),
@@ -242,12 +236,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=15) 
 	    public void ValidcodeandSubmitMAX() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.max");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.max");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getEditorOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getEditorOutput();
 			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
@@ -257,12 +253,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=16) 
 	    public void inValidcodeandSubmitMAX() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.max");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.max");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getEditorOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getEditorOutput();
 			LogHandler.info("Editor Output: " + output);;
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
@@ -274,12 +272,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=17) 
 	    public void ValidcodeandRunNumber() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.Num");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.Num");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getConsoleOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getConsoleOutput();
 			LogHandler.info("Editor Output: " + output);
 		     Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Expected output in console, but found none");
@@ -287,12 +287,14 @@ public class ArrayTest extends Hooks {
 	   
 	    @Test(priority=18) 
 	    public void inValidcodeandRunNumber() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.Num");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.Num");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String alertText = arpf.getAlertTextAndAccept(); 
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String alertText = arraysPage.getAlertTextAndAccept(); 
 			LogHandler.info("Alert Text: " + alertText);
 		    Assert.assertNotNull(alertText, "Expected alert was not present.");
 		    Assert.assertTrue(alertText.toLowerCase().contains("error"),
@@ -301,12 +303,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=19) 
 	    public void ValidcodeandSubmitNumber() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.Num");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.Num");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getEditorOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getEditorOutput();
 			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
@@ -316,12 +320,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=20) 
 	    public void inValidcodeandSubmitNumber() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.Num");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.Num");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getEditorOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getEditorOutput();
 			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
@@ -333,12 +339,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=21) 
 	    public void ValidcodeandRunSortedSquares() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.SQ");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.SQ");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getConsoleOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getConsoleOutput();
 			LogHandler.info("Editor Output: " + output);
 		     Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Expected output in console, but found none");
@@ -346,12 +354,14 @@ public class ArrayTest extends Hooks {
 	   
 	    @Test(priority=22) 
 	    public void inValidcodeandRunSortedSquares() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.SQ");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.SQ");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String alertText = arpf.getAlertTextAndAccept(); 
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String alertText = arraysPage.getAlertTextAndAccept(); 
 			LogHandler.info("Alert Text: " + alertText);
 		    Assert.assertNotNull(alertText, "Expected alert was not present.");
 		    Assert.assertTrue(alertText.toLowerCase().contains("error"),
@@ -360,12 +370,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=23) 
 	    public void ValidcodeandSubmitSortedSquares() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "valid.SQ");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid.SQ");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getEditorOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getEditorOutput();
 			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
@@ -375,12 +387,14 @@ public class ArrayTest extends Hooks {
 	    
 	    @Test(priority=24) 
 	    public void inValidcodeandSubmitSortedSquares() {
-	    	arpf.navigateToSearchthearray();
-			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestion", "invalid.SQ");
+
+	    	arraysPage.navigateToSearchthearray();
+			Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid.SQ");
+
 			String Codetoenter=data.get("Code");
-			arpf.enterpythonCode(Codetoenter);
-			arpf.clickRun();
-			String output = arpf.getEditorOutput();
+			arraysPage.enterpythonCode(Codetoenter);
+			arraysPage.clickRun();
+			String output = arraysPage.getEditorOutput();
 			LogHandler.info("Editor Output: " + output);
 			Assert.assertNotNull(output, "Console output is null");
 		     Assert.assertFalse(output.trim().isEmpty(), "Console output is empty");
@@ -391,8 +405,8 @@ public class ArrayTest extends Hooks {
 	    @Test(priority=25) 
 		 public void Signout(@Optional("NumpyNinja") String expectd) {
 			 
-			 arpf.navigateToArraysPracticeQuestions();
-			 arpf.signOut();
+	    	arraysPage.navigateToArraysPracticeQuestions();
+	    	arraysPage.signOut();
 			 String actualTitle=driver.getTitle();
 				Assert.assertEquals(actualTitle, expectd);
 				LogHandler.info("user successfully navigated back to: "+expectd);

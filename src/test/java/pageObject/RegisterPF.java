@@ -24,27 +24,27 @@ public class RegisterPF {
 		PageFactory.initElements(driver,this);
 	}
 	 @FindBy(linkText = "Get Started")
-	 WebElement getStartedBtn;
+	 private WebElement getStartedBtn;
 	 @FindBy(linkText = "Register")
-	 WebElement registerLink;
+	 private  WebElement registerLink;
 	 @FindBy(xpath = "//div[@class='navbar-nav']/div/a[text()='Data Structures']")
-	 WebElement dropDown;
+	 private  WebElement dropDown;
 	 @FindBy(linkText = "NumpyNinja")
-	 WebElement numpylink;
+	 private WebElement numpylink;
 	 @FindBy(linkText = "Sign in")
-	 WebElement signIn;
+	 private  WebElement signIn;
 	 @FindBy(id = "id_username")
-	 WebElement userNameField;
+	 private WebElement userNameField;
 	 @FindBy(id = "id_password1")
-	 WebElement pwd;
+	 private WebElement pwd;
 	 @FindBy(id = "id_password2")
-	 WebElement confirmPwd;
+	 private WebElement confirmPwd;
 	 @FindBy(xpath = "//input[@type='submit']")
-	 WebElement registerBtn;
+	 private WebElement registerBtn;
 	 @FindBy(linkText = "Login")
-	 WebElement loginLink;
+	 private WebElement loginLink;
 	 @FindBy(xpath = "//div[contains(@class,'alert-primary')]")
-	 WebElement errorMsg;
+	 private WebElement errorMsg;
 
 	 WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 

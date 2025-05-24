@@ -70,11 +70,6 @@
 2025-05-19 18:41:52 INFO  LogHandler:12 - answer is: not exist
 2025-05-19 18:42:00 INFO  LogHandler:12 - user successfully navigated back to: Overview of Trees
 2025-05-19 18:42:06 INFO  LogHandler:12 - user successfully navigated back to: NumpyNinja
-
-2025-05-21 19:49:25 INFO  LogHandler:12 - Bug - No alert shown for empty code.
-2025-05-21 19:51:28 INFO  LogHandler:12 - Bug - No alert shown for empty code.
-2025-05-21 19:51:40 INFO  LogHandler:12 - Navigated to Try Editor page.
-
 2025-05-20 13:04:41 INFO  LogHandler:12 - user is on: Time Complexity
 2025-05-20 17:12:59 INFO  LogHandler:12 - user is on: Data Structures-Introduction
 2025-05-20 17:13:04 INFO  LogHandler:12 - user is on: Time Complexity
@@ -145,4 +140,4 @@
 2025-05-20 18:21:32 INFO  LogHandler:12 - user should see Please fill out this field.
 2025-05-20 18:21:50 INFO  LogHandler:12 - user should see password_mismatch:The two password fields didn’t match.
 2025-05-20 18:21:54 INFO  LogHandler:12 - user is on Login
-
+2025-05-20 23:44:53 INFO  LogHandler:12 - user is on: Data Structures-Introduction

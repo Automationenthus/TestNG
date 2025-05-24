@@ -7,23 +7,24 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import hooks.Hooks;
-import pageObject.DataStructureIntroPF;
+import base.BaseTest;
+
+import pageObject.DataStructurePF;
 import pageObject.LinkedListPF;
 import utilities.ExcelReader;
 import utilities.LogHandler;
 
 
-public class LinkedListTest extends Hooks {
+public class LinkedListTest extends BaseTest {
 	
 	LinkedListPF llp;
 	SoftAssert softAssert;
-	DataStructureIntroPF lp;
+	DataStructurePF lp;
 	
 	@BeforeMethod
     public void pageSetup() {
 		//WebDriver driver=DriverFactory.initDriver();
-		lp= new DataStructureIntroPF(driver);
+		lp= new DataStructurePF(driver);
         llp = new LinkedListPF(driver);  
         lp.loginBackgroundForPages();
         softAssert = new SoftAssert(); 
@@ -31,7 +32,7 @@ public class LinkedListTest extends Hooks {
     }
 	
 	
-	@Test(dataProvider="linkedListPageTitle",dataProviderClass =DataSupply.class ,priority = 1)
+	@Test(dataProvider="linkedListPageTitle",dataProviderClass =DataProviders.class ,priority = 1)
 		public void dataStructureValidation(String expectedTitle)  {
 		llp.clickLLgetStatBtn();
 		 String actualTitle=driver.getTitle();
@@ -43,7 +44,7 @@ public class LinkedListTest extends Hooks {
 				
 	}
 		
-	@Test(dataProvider = "linkedListTopics", dataProviderClass =DataSupply.class,  priority = 2)
+	@Test(dataProvider = "linkedListTopics", dataProviderClass =DataProviders.class,  priority = 2)
 	public void testClickEachQueueTopic(String topic) {
 		llp.clickLLgetStatBtn();
 	    llp.clickLinkedlistTopic(topic);
@@ -51,7 +52,7 @@ public class LinkedListTest extends Hooks {
 
 	}
 	
-	@Test(dataProvider = "practiceQuestTitle" , priority = 3,dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "practiceQuestTitle" , priority = 3,dataProviderClass =DataProviders.class)
 	public void practiceQuestionsLinkValidation(String expectedTitle) {
 		llp.clickLLgetStatBtn();
 		llp.clickIntroductionLink();
@@ -64,7 +65,7 @@ public class LinkedListTest extends Hooks {
 		
 	}
 	
-	@Test(dataProvider = "linkedListTopics" , priority = 4,dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "linkedListTopics" , priority = 4,dataProviderClass = DataProviders.class)
 	public void tryhereValidationForQueue(String topic) {
 		llp.clickLLgetStatBtn();
 		llp.clickLinkedlistTopic(topic);

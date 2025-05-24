@@ -8,21 +8,25 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import hooks.Hooks;
-import pageObject.DataStructureIntroPF;
+import base.BaseTest;
+import pageObject.DataStructurePF;
+import pageObject.LoginPF;
 import pageObject.TreePF;
 import utilities.ExcelReader;
 import utilities.LogHandler;
 
-public class TreeTest extends Hooks{
+public class TreeTest extends BaseTest{
 	TreePF tp;
-	DataStructureIntroPF dp;
+	DataStructurePF dp;
+	LoginPF lp;
 	SoftAssert softAssert;
 	
 	@BeforeMethod
     public void pageSetup() {
 		tp = new TreePF(driver); 
-        dp=new 	DataStructureIntroPF(driver);
+		lp=new LoginPF(driver);
+		//lp.login();
+        dp=new 	DataStructurePF(driver);
         dp.loginBackgroundForPages();
         softAssert = new SoftAssert(); 
         
@@ -42,7 +46,7 @@ public class TreeTest extends Hooks{
 			
 	}
 	
-	@Test(priority=2,dataProvider="treePageLinks",dataProviderClass = DataSupply.class)
+	@Test(priority=2,dataProvider="treePageLinks",dataProviderClass = DataProviders.class)
 	public void treePageLinksValidation(String topic,String expectedTitle) {
 		tp.clickOnGetStartBtn();
 		tp.clickTopic(topic);
@@ -52,7 +56,7 @@ public class TreeTest extends Hooks{
 		
 	}
 
-	@Test(priority=3,dataProvider="treeLinks",dataProviderClass = DataSupply.class)
+	@Test(priority=3,dataProvider="treeLinks",dataProviderClass = DataProviders.class)
 	public void tryHereValidation(String topic,String tryHeretitle){
 		tp.clickOnGetStartBtn();
 		tp.clickOnOverviewOfTree();
@@ -87,13 +91,11 @@ public class TreeTest extends Hooks{
 		softAssert.assertAll();
 		
 	}
-	@Test(priority=6)
-	public void incorrectPythonCodeValidation() {
+	@Test(priority=6,dataProvider = "invalidpythonCode",dataProviderClass = DataProviders.class)
+	public void incorrectPythonCodeValidation(String codeToEnter) {
 		tp.clickOnGetStartBtn();
 		tp.clickOnOverviewOfTree();
 		tp.clickOnTryhere();
-		Map<String, String> data = ExcelReader.getDataByScenario("Pythoncode", "incorrectCode");
-		String codeToEnter=data.get("Pcode");
 		dp.editor(codeToEnter);
 		dp.clickOnRunBtn();
 		Assert.assertTrue(dp.isAlertIsPresent());
@@ -104,17 +106,15 @@ public class TreeTest extends Hooks{
 		
 		
 	}
-	@Test(priority=7)
-	public void validPythonCodeValidation() {
+	@Test(priority=7,dataProvider = "validpythonCode",dataProviderClass = DataProviders.class)
+	public void validPythonCodeValidation(String codeToEnter,String result) {
 		tp.clickOnGetStartBtn();
 		tp.clickOnOverviewOfTree();
 		tp.clickOnTryhere();
-		Map<String, String> data = ExcelReader.getDataByScenario("Pythoncode", "validCode");
-		String codeToEnter=data.get("Pcode");
 		dp.editor(codeToEnter);
 		dp.clickOnRunBtn();
 		String actualResult=dp.getOutputData();
-		String expectedResult=data.get("Result");
+		String expectedResult=result;
 		Assert.assertEquals(actualResult, expectedResult);
 		LogHandler.info("answer is: " +actualResult);
 		

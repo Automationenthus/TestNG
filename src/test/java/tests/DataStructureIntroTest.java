@@ -1,3 +1,4 @@
+
 package tests;
 
 import java.util.List;
@@ -13,28 +14,32 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import base.BaseTest;
 import driverFactory.DriverFactory;
-import hooks.Hooks;
-import pageObject.DataStructureIntroPF;
+import pageObject.DataStructurePF;
+import pageObject.LoginPF;
 import utilities.ExcelReader;
 import utilities.LogHandler;
 
 
-public class DataStructureIntroTest extends Hooks {
+public class DataStructureIntroTest extends BaseTest {
 	
-	DataStructureIntroPF dp;
+	DataStructurePF dp;
+	LoginPF lp;
 	SoftAssert softAssert;
 	
 	@BeforeMethod
     public void pageSetup() {
-		dp = new DataStructureIntroPF(driver);  
-        dp.loginBackgroundForPages();
+		dp = new DataStructurePF(driver); 
+		lp=new LoginPF(driver);
+		dp.loginBackgroundForPages();
+		//lp.login();		
         softAssert = new SoftAssert(); 
         
     }
 	
 	
-	@Test(dataProvider="dataStructureTitle",dataProviderClass =DataSupply.class ,priority = 1)
+	@Test(dataProvider="dataStructureTitle",dataProviderClass =DataProviders.class ,priority = 1)
 		public void dataStructureValidation(String expectedTitle)  {
 		dp.getStartbtnclick();
 		 String actualTitle=driver.getTitle();
@@ -59,7 +64,7 @@ public class DataStructureIntroTest extends Hooks {
 	}
 	
 	
-	@Test(dataProvider = "practiceQuestTitle" , priority = 3,dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "practiceQuestTitle" , priority = 3,dataProviderClass = DataProviders.class)
 	public void practiceQuestionsLinkValidation(String expectedTitle) {
 		dp.getStartbtnclick();
 		dp.timeComplexity();
@@ -72,7 +77,7 @@ public class DataStructureIntroTest extends Hooks {
 		
 	}
 	
-	@Test(dataProvider = "tryEditorTitle" , priority = 4,dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "tryEditorTitle" , priority = 4,dataProviderClass = DataProviders.class)
 	public void tryhereValidation(String expectedTitle) {
 		dp.getStartbtnclick();
 		dp.timeComplexity();
@@ -97,34 +102,31 @@ public class DataStructureIntroTest extends Hooks {
 		softAssert.assertAll();
 		
 	}
-	@Test(priority=6)
-	public void incorrectPythonCodeValidation() {
+
+	@Test(priority=6,dataProvider = "invalidpythonCode",dataProviderClass = DataProviders.class)
+	public void incorrectPythonCodeValidation(String codeToEnter) {
 		dp.getStartbtnclick();
 		dp.timeComplexity();
 		dp.clickOnTryHere();
-		Map<String, String> data = ExcelReader.getDataByScenario("Pythoncode", "incorrectCode");
-		String codeToEnter=data.get("Pcode");
 		dp.editor(codeToEnter);
 		dp.clickOnRunBtn();
 		Assert.assertTrue(dp.isAlertIsPresent());
 		String text=dp.getAlertText();
 		LogHandler.info("alert text is: " +text);
-		 
-
-		
 		
 	}
-	@Test(priority=7)
-	public void validPythonCodeValidation() {
+	
+	
+	
+	@Test(priority=7,dataProvider = "validpythonCode",dataProviderClass = DataProviders.class)
+	public void validPythonCodeValidation(String codeToEnter,String Result) {
 		dp.getStartbtnclick();
 		dp.timeComplexity();
 		dp.clickOnTryHere();
-		Map<String, String> data = ExcelReader.getDataByScenario("Pythoncode", "valid");
-		String codeToEnter=data.get("Pcode");
 		dp.editor(codeToEnter);
 		dp.clickOnRunBtn();
 		String actualResult=dp.getOutputData();
-		String expectedResult=data.get("Result");
+		String expectedResult=Result;
 		Assert.assertEquals(actualResult, expectedResult);
 		LogHandler.info("answer is: " +actualResult);
 		

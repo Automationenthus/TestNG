@@ -26,15 +26,15 @@ public class TreePF {
 	
 	
 	@FindBy(xpath = "//h5[text()='Tree']/../a[text()='Get Started']")
-	WebElement treeGetStart;
+	private WebElement treeGetStart;
 	@FindBy(linkText = "Try here>>>")
-	WebElement tryHereLink;
+	private WebElement tryHereLink;
 	@FindBy(linkText = "Practice Questions")
-	WebElement practiceQuestionsLink;
+	private WebElement practiceQuestionsLink;
 	@FindBy(xpath = "//form[@id='answer_form']/button")
-	WebElement runBtn;
+	private WebElement runBtn;
     @FindBy(linkText = "Overview of Trees")
-    WebElement overViewOfTree;
+    private WebElement overViewOfTree;
 	
 	
 	public void clickOnGetStartBtn() {

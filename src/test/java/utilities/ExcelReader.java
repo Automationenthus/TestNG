@@ -18,8 +18,8 @@ import java.util.Map;
 //		
 
 		public class ExcelReader {
-
-		    private static final String FILE_PATH = "src/test/resources/ExcelTestData/TestData.xlsx";
+			
+		    private static final String FILE_PATH = ConfigReader.getProperty("filePath");
 
 		    public static Map<String, String> getDataByScenario(String sheetName, String scenarioType) {
 		        Map<String, String> dataMap = new HashMap<>();
@@ -68,19 +68,7 @@ import java.util.Map;
 
 		        return dataMap;
 		    }
-		    public static void main(String[] args) {
-		    	Map<String, String> data = ExcelReader.getDataByScenario("Pythoncode", "incorrectCode");
-
-		        // Check if any data was found
-		        if (data.isEmpty()) {
-		            System.out.println("No data found for scenario: incorrectCode");
-		        } else {
-		            System.out.println("Data for scenario 'incorrectCode':");
-		            for (Map.Entry<String, String> entry : data.entrySet()) {
-		                System.out.println(entry.getKey() + " = " + entry.getValue());
-		            }
-		        }
-		    }
+		   
 				
 			}
 		    

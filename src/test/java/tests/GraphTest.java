@@ -9,24 +9,25 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import hooks.Hooks;
-import pageObject.DataStructureIntroPF;
+
+import base.BaseTest;
+import pageObject.DataStructurePF;
 import pageObject.GraphPF;
 import utilities.ExcelReader;
 import utilities.LogHandler;
 
 
 
-public class GraphTest extends Hooks {
+public class GraphTest extends BaseTest {
 	
 	GraphPF gp;
 	SoftAssert softAssert;
-	DataStructureIntroPF lp;
+	DataStructurePF lp;
 	
 	@BeforeMethod
     public void pageSetup() {
 		//WebDriver driver=DriverFactory.initDriver();
-		lp= new DataStructureIntroPF(driver);
+		lp= new DataStructurePF(driver);
         gp = new GraphPF(driver);  
         lp.loginBackgroundForPages();
         softAssert = new SoftAssert(); 
@@ -34,7 +35,7 @@ public class GraphTest extends Hooks {
     }
 	
 	
-	@Test(dataProvider="graphPageTitle", dataProviderClass =DataSupply.class, priority = 1)
+	@Test(dataProvider="graphPageTitle", dataProviderClass =DataProviders.class, priority = 1)
 		public void graphPageValidation(String expectedTitle)  {
 		gp.getStartbtnclick();
 		 String actualTitle=driver.getTitle();
@@ -71,7 +72,7 @@ public class GraphTest extends Hooks {
 	}
 	
 	
-	@Test(dataProvider = "practiceQuestTitle", dataProviderClass = DataSupply.class, priority = 4)
+	@Test(dataProvider = "practiceQuestTitle", dataProviderClass = DataProviders.class, priority = 4)
 	public void practiceQuestionsLinkValidation(String expectedTitle) {
 		gp.getStartbtnclick();
 		gp.clickGraph();
@@ -84,7 +85,7 @@ public class GraphTest extends Hooks {
 		
 	}
 	
-	@Test(dataProvider = "tryEditorTitle" , priority = 5, dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "tryEditorTitle" , priority = 5, dataProviderClass = DataProviders.class)
 	public void tryhereValidation(String expectedTitle) {
 		gp.getStartbtnclick();
 		gp.clickGraph();
@@ -105,7 +106,7 @@ public class GraphTest extends Hooks {
 		gp.clickRunButton();
 		boolean alertPresent = gp.isAlertIsPresent();
 		softAssert.assertFalse(alertPresent, "Alert is not present after clicking Run");
-		//LogHandler.info("alert not found");
+		LogHandler.info("alert not found");
 		softAssert.assertAll();
 		
 	}
@@ -156,7 +157,7 @@ public class GraphTest extends Hooks {
 	}
 	
 	
-	@Test(dataProvider = "tryEditorTitle" , priority = 10,dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "tryEditorTitle" , priority = 10,dataProviderClass = DataProviders.class)
 	public void tryhereValidationForGR(String expectedTitle) {
 		gp.getStartbtnclick();
 		gp.clickGraphRepresentations();

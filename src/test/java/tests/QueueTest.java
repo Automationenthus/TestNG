@@ -7,22 +7,23 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import hooks.Hooks;
-import pageObject.DataStructureIntroPF;
+import base.BaseTest;
+
+import pageObject.DataStructurePF;
 import pageObject.QueuePF;
 import utilities.ExcelReader;
 import utilities.LogHandler;
 
 
-public class QueueTest extends Hooks {
+public class QueueTest extends BaseTest{
 	
 	QueuePF qp;
 	SoftAssert softAssert;
-	DataStructureIntroPF lp;
+	DataStructurePF lp;
 	
 	@BeforeMethod
     public void pageSetup() {
-		lp= new DataStructureIntroPF(driver);
+		lp= new DataStructurePF(driver);
         qp = new QueuePF(driver);  
         lp.loginBackgroundForPages();
         softAssert = new SoftAssert(); 
@@ -30,7 +31,7 @@ public class QueueTest extends Hooks {
     }
 	
 	
-	@Test(dataProvider="queuePageTitle",dataProviderClass =DataSupply.class ,priority = 1)
+	@Test(dataProvider="queuePageTitle",dataProviderClass =DataProviders.class ,priority = 1)
 		public void dataStructureValidation(String expectedTitle)  {
 		qp.clickQueueGetBtn();
 		 String actualTitle=driver.getTitle();
@@ -44,7 +45,7 @@ public class QueueTest extends Hooks {
 	
 
 	
-	@Test(dataProvider = "queueTopics", dataProviderClass =DataSupply.class,  priority = 2)
+	@Test(dataProvider = "queueTopics", dataProviderClass =DataProviders.class,  priority = 2)
 	public void testClickEachQueueTopic(String topic) {
 		qp.clickQueueGetBtn();
 	    qp.clickQueueTopic(topic);
@@ -52,7 +53,7 @@ public class QueueTest extends Hooks {
 
 	}
 	
-	@Test(dataProvider = "practiceQuestTitle" , priority = 3,dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "practiceQuestTitle" , priority = 3,dataProviderClass = DataProviders.class)
 	public void practiceQuestionsLinkValidation(String expectedTitle) {
 		qp.clickQueueGetBtn();
 		qp.clickImplementationOfQueueInPython();
@@ -65,7 +66,7 @@ public class QueueTest extends Hooks {
 	
 	
 	
-	@Test(dataProvider = "queueTopics" , priority = 4, dataProviderClass = DataSupply.class)
+	@Test(dataProvider = "queueTopics" , priority = 4, dataProviderClass = DataProviders.class)
 	public void tryhereValidationForQueue(String topic) {
 		qp.clickQueueGetBtn();
 		qp.clickQueueTopic(topic);
