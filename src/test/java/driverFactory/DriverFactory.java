@@ -22,7 +22,7 @@ public class DriverFactory {
     	          
 
         if (browser.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
+           // WebDriverManager.chromedriver().setup();
             driver.set(new ChromeDriver());
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();

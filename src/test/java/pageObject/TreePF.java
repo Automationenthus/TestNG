@@ -13,6 +13,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.LogHandler;
+
 public class TreePF {
 	WebDriver driver;
 	WebDriverWait wait;
@@ -66,11 +68,11 @@ public class TreePF {
 			wait.until(ExpectedConditions.elementToBeClickable(link)).click();
 
 		} catch (NoSuchElementException e) {
-			System.out.println("Link not found: " + topicName);
+			LogHandler.info("Topic link not found: " + topicName);
 			throw e; 
 
 		} catch (Exception e) {
-			System.out.println("❗ Unexpected error while clicking link: " + topicName);
+			LogHandler.error("❗ Unexpected error while clicking topic link: " + topicName, e);
 			e.printStackTrace();
 			throw e;
 		}
@@ -91,7 +93,7 @@ public class TreePF {
 			wait.until(ExpectedConditions.elementToBeClickable(link)).click();
 		}
 		catch(NoSuchElementException e) {
-			System.out.println("Link not found: " + linkName);
+			LogHandler.error("Unexpected error while clicking tree link: " + linkName, e);
 
 		}
 	}

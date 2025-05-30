@@ -85,30 +85,26 @@ public class ArrayTest extends BaseTest {
 	}
 
 
-	@Test(priority=5)
-	public void validPythonCodeforTryEditor() {
-		arraysPage.navigateToTryEditorPage();
-		Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid");
-		String Codetoenter=data.get("Code");
-		arraysPage.enterpythonCode(Codetoenter);
+   @Test(priority=5,dataProvider = "validpythonCode",dataProviderClass = DataProviders.class)
+	public void validPythonCodeforTryEditor(String codeToEnter) {
+	    arraysPage.navigateToTryEditorPage();
+		arraysPage.enterpythonCode(codeToEnter);
 		arraysPage.clickRun();
 		String output = arraysPage.getEditorOutput();
-		Assert.assertNotNull(output, "Output is null");
-		Assert.assertFalse(output.trim().isEmpty(), "Output is empty");
-		LogHandler.info("answer is: " +output);
-	}
-
-	@Test(priority=6)
-	public void InvalidPythonCodeforTryEditor() {
-		arraysPage.navigateToTryEditorPage();
-		Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid");
-		String Codetoenter=data.get("Code");
-		arraysPage.enterpythonCode(Codetoenter);
+         Assert.assertNotNull(output, "Output is null");
+         Assert.assertFalse(output.trim().isEmpty(), "Output is empty");
+         LogHandler.info("answer is: " +output);
+ }
+	
+   @Test(priority=6, dataProvider = "invalidpythonCode",dataProviderClass = DataProviders.class)
+	public void InvalidPythonCodeforTryEditor(String codeToEnter) {
+	    arraysPage.navigateToTryEditorPage();
+		arraysPage.enterpythonCode(codeToEnter);
 		arraysPage.clickRun();
 		String alertText = arraysPage.getAlertTextAndAccept(); // Or AlertUtils.getAlertTextAndAccept()
-		Assert.assertNotNull(alertText, "Expected alert was not present.");
-		Assert.assertTrue(alertText.toLowerCase().contains("nameerror"),
-				"Expected alert to contain 'NameError', but got: " + alertText);
+	    Assert.assertNotNull(alertText, "Expected alert was not present.");
+	    Assert.assertTrue(alertText.toLowerCase().contains("nameerror"),
+	            "Expected alert to contain 'NameError', but got: " + alertText);
 	}
 
 	@Test(priority=7) 

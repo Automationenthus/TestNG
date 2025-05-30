@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import base.BaseTest;
-import pageObject.DataStructurePF;
 import pageObject.GraphPF;
 import pageObject.LoginPF;
 import utilities.LogHandler;
@@ -40,7 +39,7 @@ public class GraphTest extends BaseTest {
 		softAssert=new SoftAssert();
 		softAssert.assertEquals(actualTitle, expectedTitle);
 		Assert.assertTrue(gp.headerElementsValidation());
-		//LogHandler.info("user is on: " +actualTitle);
+		LogHandler.info("user is on: " +actualTitle);
 
 
 	}
@@ -53,7 +52,7 @@ public class GraphTest extends BaseTest {
 		String actualTitle=driver.getTitle();
 		String expectedTitle=expectd;
 		Assert.assertEquals(actualTitle, expectedTitle);
-		//LogHandler.info("user is on: " +actualTitle);
+		LogHandler.info("user is on: " +actualTitle);
 
 	}
 
@@ -65,7 +64,7 @@ public class GraphTest extends BaseTest {
 		String actualTitle=driver.getTitle();
 		String expectedTitle=expectd;
 		Assert.assertEquals(actualTitle, expectedTitle);
-		//LogHandler.info("user is on: " +actualTitle);
+		LogHandler.info("user is on: " +actualTitle);
 
 	}
 
@@ -77,7 +76,7 @@ public class GraphTest extends BaseTest {
 		gp.clickPracticeQuestionsLink();
 		String actualTitle=driver.getTitle();
 		Assert.assertEquals(actualTitle, expectedTitle);
-		//LogHandler.info("user is on: " +actualTitle);
+		LogHandler.info("user is on: " +actualTitle);
 
 
 
@@ -90,7 +89,7 @@ public class GraphTest extends BaseTest {
 		gp.clickTryHere();
 		String actualTitle=driver.getTitle();
 		Assert.assertEquals(actualTitle, expectedTitle);
-		//LogHandler.info("user is on: " +actualTitle);
+		LogHandler.info("user is on: " +actualTitle);
 
 
 	}
