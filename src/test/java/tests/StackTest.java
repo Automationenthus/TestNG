@@ -81,32 +81,27 @@ public class StackTest extends BaseTest {
 	}
 
 
-	@Test(priority=5)
-	public void validPythonCodeforTryEditor() {
-		stackpage.navigateToStackstryeditorPage();
-		Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "valid");
-		String Codetoenter=data.get("Code");
-		stackpage.enterpythonCode(Codetoenter);
-		stackpage.clickRunButton();
+	@Test(priority=5,dataProvider = "validpythonCode",dataProviderClass = DataProviders.class)
+	public void validPythonCodeforTryEditor(String codeToEnter) {
+	   stackpage.navigateToStackstryeditorPage();
+	   stackpage.enterpythonCode(codeToEnter);
+	   stackpage.clickRunButton();
 		String output = stackpage.getEditorOutput();
-		Assert.assertNotNull(output, "Output is null");
-		Assert.assertFalse(output.trim().isEmpty(), "Output is empty");
-		LogHandler.info("answer is: " +output);
-	}
+         Assert.assertNotNull(output, "Output is null");
+         Assert.assertFalse(output.trim().isEmpty(), "Output is empty");
+         LogHandler.info("answer is: " +output);
+ }
 
-	@Test(priority=6)
-	public void InvalidPythonCodeforTryEditor() {
-		stackpage.navigateToStackstryeditorPage();
-		Map<String, String> data = ExcelReader.getDataByScenario("PracticeQuestions", "invalid");
-		String Codetoenter=data.get("Code");
-		stackpage.enterpythonCode(Codetoenter);
+ @Test(priority=6,dataProvider = "invalidpythonCode",dataProviderClass = DataProviders.class)
+	public void InvalidPythonCodeforTryEditor(String codeToEnter) {
+	 stackpage.navigateToStackstryeditorPage();
+		stackpage.enterpythonCode(codeToEnter);
 		stackpage.clickRunButton();
 		String alertText = stackpage.getAlertTextAndAccept(); 
-		Assert.assertNotNull(alertText, "Expected alert was not present.");
-		Assert.assertTrue(alertText.toLowerCase().contains("nameerror"),
-				"Expected alert to contain 'NameError', but got: " + alertText);
+	    Assert.assertNotNull(alertText, "Expected alert was not present.");
+	    Assert.assertTrue(alertText.toLowerCase().contains("nameerror"),
+	            "Expected alert to contain 'NameError', but got: " + alertText);
 	}
-
 
 	@Test(priority=7) //(description = "Verify navigation to Practice Questions page and mark BUG)
 	public void test_Application_Practice_Questions_Link_Stack_Bug() {

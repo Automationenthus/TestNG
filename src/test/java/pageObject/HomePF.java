@@ -99,9 +99,10 @@ public class HomePF {
 
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);
 			((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+			LogHandler.info("Clicked 'Get Started' button for: " + option);
 
 		} catch (Exception e) {
-			System.err.println("Error while clicking Get Started for: " + option);
+			LogHandler.error("Error while clicking 'Get Started' for: " + option, e);
 			e.printStackTrace();
 		}
 

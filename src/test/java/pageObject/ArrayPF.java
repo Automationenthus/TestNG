@@ -17,6 +17,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import driverFactory.DriverFactory;
+import utilities.LogHandler;
 
 
 
@@ -134,9 +135,9 @@ public class ArrayPF {
 	public void scrollToTryHere() {
 		try {
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tryhereLink);
-			System.out.println("Scrolled to Try Here link successfully.");
+			LogHandler.info("Scrolled to Try Here link successfully.");
 		} catch (Exception e) {
-			System.out.println("Failed to scroll to Try Here link: " + e.getMessage());
+			LogHandler.error("Failed to scroll to Try Here link.", e);
 		}
 	}
 
@@ -145,10 +146,11 @@ public class ArrayPF {
 		try {
 			WebElement link = driver.findElement(By.linkText(linkText));
 			link.click();
+			LogHandler.info("Clicked link with text: " + linkText);
 		} catch (NoSuchElementException e) {
-			System.out.println("Link not found: " + linkText);
+			LogHandler.info("Link not found: " + linkText);
 		} catch (ElementNotInteractableException e) {
-			System.out.println("Link not interactable: " + linkText);
+			LogHandler.info("Link not interactable: " + linkText);
 		}
 	}
 
@@ -251,10 +253,12 @@ public class ArrayPF {
 		try {
 			WebElement link = driver.findElement(By.linkText(linkText));
 			link.click();
+			LogHandler.info("Clicked on practice question link: " + linkText);
+
 		} catch (NoSuchElementException e) {
-			System.out.println("Link not found: " + linkText);
+			LogHandler.info("Practice question link not found: " + linkText);
 		} catch (ElementNotInteractableException e) {
-			System.out.println("Link not interactable: " + linkText);
+			LogHandler.info("Practice question link not interactable: " + linkText);
 		}
 	}
 
@@ -306,9 +310,9 @@ public class ArrayPF {
 		try {
 			WebElement outputElement = new WebDriverWait(driver, Duration.ofSeconds(10))
 					.until(ExpectedConditions.visibilityOf(outputConsole));
-			return outputElement.getText().trim();
+			return outputElement.getText().trim();		
 		} catch (Exception e) {
-			System.out.println("Console output not found or empty.");
+			LogHandler.error("Console output not found or empty.", e);
 			return "";
 		}
 	}

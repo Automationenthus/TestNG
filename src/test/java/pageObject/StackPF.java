@@ -16,6 +16,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driverFactory.DriverFactory;
+import utilities.LogHandler;
 
 public class StackPF {
 	WebDriver driver;
@@ -107,9 +108,9 @@ public class StackPF {
 			WebElement link = driver.findElement(By.linkText(linkText));
 			link.click();
 		} catch (NoSuchElementException e) {
-			System.out.println("Link not found: " + linkText);
+			LogHandler.info("Link not found: " + linkText);
 		} catch (ElementNotInteractableException e) {
-			System.out.println("Link not interactable: " + linkText);
+			LogHandler.info("Link not interactable: " + linkText);
 		}
 	}
 	public boolean isStackPageDisplayed() {
@@ -120,9 +121,9 @@ public class StackPF {
 	public void scrollToTryHere() {
 		try {
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tryhereLink);
-			System.out.println("Scrolled to Try Here link successfully.");
+			LogHandler.info("Scrolled to Try Here link successfully.");
 		} catch (Exception e) {
-			System.out.println("Failed to scroll to Try Here link: " + e.getMessage());
+			LogHandler.error("Failed to scroll to Try Here link.", e);
 		}
 	}
 
